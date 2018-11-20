@@ -52,22 +52,6 @@ struct CloudSpace {
         iopsWrite  @3 :Float32;
         iopsReadMax @4 :Float32;
         iopsWriteMax @5 :Float32;
-        configuredIops @6 :ConfiguredIopsStruct;
-        struct ConfiguredIopsStruct{
-          totalBytesSec @0 :Float32;
-          readBytesSec @1 :Float32;
-          writeBytesSec @2 :Float32;
-          totalIopsSec @3 :Float32;
-          readIopsSec @4 :Float32;
-          writeIopsSec @5 :Float32;
-          totalBytesSecMax @6 :Float32;
-          readBytesSecMax @7 :Float32;
-          writeBytesSecMax @8 :Float32;
-          totalIopsSecMax @9 :Float32;
-          readIopsSecMax @10 :Float32;
-          writeIopsSecMax @11 :Float32;
-          sizeIopsSec @12 :Float32;
-        }
     }
   }
 }
@@ -147,14 +131,60 @@ This will generate an Excel document containing a tab for each account with the 
 
 
 <a id="access-files"></a>
-## Access the consumption data files on the controller
+## Access the consumption data files on the master mode 
 
-Consumption data are under
-```
-/var/ovc/billing/
-```
-To connect to the controller check these [docs](docs/Sysadmin/Connect) 
+In order to get access to **ovc_master** you first need to get access to one of the controllers of your G8 environment:
 
-For each account there will be a subdirectory, for instance for the account with ID 60 this is `/var/ovc/billing/6`
+- Check whether your private SSH key is loaded:
+  ```shell
+  ssh-add -l
+  ```
+
+- In case your private key is not loaded, let's add it by first making sure **ssh-agent** is running, and then actually adding the key:
+  ```shell
+  eval $(ssh-agent)
+  ssh-add ~/.ssh/id_rsa
+  ```
+
+- Clone the environment repository:
+  ```shell
+  git clone %address-of-the-master-copy-of-your-environment-repository%
+  ```
+
+- Get the (public) IP address of one of the controllers from **service.hrd** in **services/openvcloud__ovc_setup__main**:
+  ```shell
+  cat services/services/openvcloud__ovc_setup__main/service.hrd
+  ```
+
+- The IP address will be found as a value for **instance.ovc.cloudip**
+
+- Make sure **master_root**, the file holding the private key for accessing the controller is protected:
+  ```shell
+  chmod 600 keys/git_root
+  ```
+
+- Get to the controller over SSH:
+  ```shell
+  ssh root@%ovc-git-address% -A -i keys/git_root
+  ```
+
+Now that you are connected to one of the controllers, you will access the **ovc_master** Docker container:
+
+- On the controller you might first want to list all running Docker containers:
+  ```shell
+  docker ps
+  ```
+
+- The **ovc_master** Docker container will be listed as one of the running containers, start an interactive session with it:
+  ```shell
+  docker exec -i -t ovcmaster /bin/bash
+  ```
+
+- Get to the resource tracking records:
+  ```shell
+  cd /opt/jumpscale7/var/resourcetracking
+  ```
+
+For each account there will be a subdirectory, for instance for the account with ID 60 this is `/opt/jumpscale7/var/resourcetracking/6`
 
 In there you'll find further subdirectories structured as `year/month/day/hour`.

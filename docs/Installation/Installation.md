@@ -6,6 +6,7 @@ Setting up an OpenvCloud cluster is done in following steps:
 - [Validate the configuration file](#validate-config)
 - [Configure the switches](#configure-switches)
 - [Install operation system on the controller nodes](#controller-os)
+- [Using the management image for the installer script](#man-container)
 - [Setup the Kubernetes cluster and deploy the OpenvCloud system containers](#kubernetes-cluster)
 - [Access the management container](#management-container)
 - [Install the operating systems on the nodes](#os-nodes)
@@ -89,55 +90,48 @@ Repeat this procedure for all three controllers.
 @TODO
 
 
+<a id="man-container"></a>
+## Using the management image for the installer script
+
+To have all the necessary requirements to use the installer to setup the cluster, you can use the management docker image.
+
+The Docker image is available on Docker Hub: https://hub.docker.com/r/openvcloud/management/.
+
+Install Docker on the first controller node:
+```bash
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
+add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+apt-get install apt-transport-https
+apt-get update
+apt-get install libltdl7 aufs-tools
+apt-get install docker-ce=17.03.0~ce-0~ubuntu-xenial
+```
+
+Create and start the required [openvcloud/management/](https://hub.docker.com/r/openvcloud/management/) Docker container:
+```bash
+docker run --rm -it openvcloud/management /bin/bash 
+```
+
+
 <a id="kubernetes-cluster"></a>
 ### Setup the Kubernetes cluster and deploy the OpenvCloud system containers
 
-This will create a Kubernetes cluster, and deploy all OpenvCloud system containers needed to manage an OpenvCloud cluster.
+In the Docker container use the [installer](../scripts/install/installer) script as follows to setup the Kubernetes cluster on the controllers:
+```bash
+cd /opt/code/github/0-complexity/openvcloud_installer/scripts/install
+./installer --version {installation version} --config {config file path} cluster deploy
+```
+
+The two options in the command are:
+- `--version` specifies the required release to be installed, e.g. ` 2.3.0`; for all releases check [here](https://github.com/0-complexity/home/tree/master/manifests)
+- `--config` specifies the path of the config file on the filesystem, typically you copy the file on the root of the container: `/system-config.yaml`
+
+The [installer](../scripts/install/installer) script will create a Kubernetes cluster, and deploy all OpenvCloud system containers needed to manage an OpenvCloud cluster.
 
 One of these containers is the management container, through which you will be able to check the status of all other containers;discussed next.
 
-To connect to the controller use [teleport](Systemadmin/Connect/teleport.md)
-
 For more details about the `ìnstaller` script see [Installer Script Details](Installer-script.md).
 
-To begin the installation you need to first login to the docker registry that contains the needed install image.
-This is done as follows:
-
-```bash
-docker login -u {username} {docker registry}
-```
-
-The above command will result in a prompt to enter the password of the specified account.
-
-Run the following command to start the cluster installation:
-
-```bash
-docker run -it --rm -e ENV_OVC_VERSION={version} {docker_registry}/openvcloud/ninstaller:{IMAGE VERSION}
-```
-
-> It is possible to specify the manifest url directly instead of the version:
-
-```bash
-docker run -it --rm -e OVC_VERSION_URL={manifest url} {docker_registry}/openvcloud/ninstaller:{IMAGE VERSION}
-```
-
-This will result in the following prompt:
-
-![ninstaller](images/ninstaller.png)
-
-Follow the instruction in the prompt to get the keycode:
-
-![Meneja token](images/meneja-token.png)
-
-Copy the keycode and paste it to the prompt and enter the password for that key. Select from the next menu the environment to be installed.
-
-![Env select](images/env-select.png)
-
-Then choose `cluster deploy` to install the cluster.
-
-![Cluster command](images/cmd-select.png)
-
-![Action select](images/action-select.png)
 
 <a id="management-container"></a>
 ## Access the management container
@@ -153,28 +147,21 @@ From a web browser open the OpenvCloud portal and go to the **0-access** page at
 Choose `management` from the list. You will be directed to a page that will allow you to request access to the pod which will redirect you to a page with instructions about how to access the management container and the remaining time for this session.
 
 In the management container you can check the status of all pods using the following command:
-
 ```bash
 kubectl get pods
 ```
 
 If all pods are running continue to the next step.
 
+
 <a id="os-nodes"></a>
 ## Installing the operating system on the nodes
 
 You need to be in management container to perform this operation.
 
-To prepare the CPU and storage nodes with the necessary OS, first start a tmux session and then run the following command:
-
+To prepare the CPU and storage nodes with the necessary OS run the following command:
 ```bash
 installer --config {config file} node action --name all install_os
-```
-
-If a node fails during the installation, use the following command to install the node again:
-
-```bash
-installer --config {config file} node action --name {node name} install_os
 ```
 
 
@@ -182,49 +169,53 @@ installer --config {config file} node action --name {node name} install_os
 ## Setup the storage nodes
 
 From the management container execute:
-
 ```bash
-ssh -A ovs # this will get you on the Open vStorage pod (specially prepared to have systemd)  
 export ENVNAME="be-g8-3"
+ssh -A ovs # this will get you on the Open vStorage pod (specially prepared to have systemd)  
 # let's generate the config
-cd /opt/code/git.gig.tech/openvcloud/openvcloud_installer/scripts/ovs/
+cd /opt/code/github/0-complexity/openvcloud_installer/scripts/ovs/
 python3 ovs_configurator.py --config_path=/opt/cfg/system/system-config.yaml
 # clone Open vStorage  autoinstaller
 mkdir /opt/code/github/openvstorage/
 cd /opt/code/github/openvstorage
+git clone git@github.com:openvstorage/dev_ops.git -b 4.1.4
 mkdir -p dev_ops/Ansible/openvstorage/playbooks/inventories/$ENVNAME/group_vars
 # copy our generated files
-cp /opt/code/git.gig.tech/openvcloud/openvcloud/openvcloud_installer/scripts/ovs/output/{inventory,setup.json} /opt/code/github/openvstorage/dev_ops/Ansible/openvstorage/playbooks/inventories/$ENVNAME/
-cp /opt/code/git.gig.tech/openvcloud/openvcloud/openvcloud_installer/scripts/ovs/output/all /opt/code/github/openvstorage/dev_ops/Ansible/openvstorage/playbooks/inventories/$ENVNAME/group_vars
-
-cd /opt/code/github/openvstorage/dev_ops/Ansible/openvstorage/playbooks/
+cp /opt/code/github/0-complexity/openvcloud_installer/scripts/ovs/output/{inventory,setup.json} /opt/code/github/openvstorage/dev_ops/Ansible/openvstorage/playbooks/inventoeries/$ENVNAME/
+cp /opt/code/github/0-complexity/openvcloud_installer/scripts/ovs/output/all /opt/code/github/openvstorage/dev_ops/Ansible/openvstorage/playbooks/inventoeries/$ENVNAME/group_vars
+# preinstall script which installs Ansible
+bash /opt/code/github/openvstorage/dev_ops/Ansible/openvstorage/bin/pre-install.sh
+cd /opt/code/github/openvstorage/dev_ops/Ansible/playbooks/
 ansible-playbook -i inventories/$ENVNAME/inventory preInstall.yml
 # this last step is not very bullet proof and might need to be repeated
 ansible-playbook -i inventories/$ENVNAME/inventory full_setup.yml
 ```
+
 
 <a id="jumpscale-nodes"></a>
 ## Install JumpScale services on the OpenvCloud cluster nodes
 
 You need to be in management container to perform this operation.
 
-First start a tmux session. The following command will install the JumpScale services on all OpenvCloud cluster nodes (CPU and storage):
-
+The following command will install the JumpScale services on all OpenvCloud cluster nodes (CPU and storage):
 ```bash
 installer --config {config file} node jsaction --name all install
-```
-
-If a node fails during the installation, use the following command to install the node again:
-
-```bash
-installer --config {config file} node jsaction --name {node name} install
 ```
 
 For more details about the `ìnstaller` script see [Installer Script Details](Installer-script.md).
 
 When done, the environment should be ready to use.
 
+
 <a id="deploy-images"></a>
 ## Deploy virtual machine images
 
-To add images [see](../CloudBrokerPortal/Images/Images.md)
+Login to management node via 0-access.  
+On the management pod install the image with the following command:
+```
+installer image deploy --name image_ubuntu-1604
+```
+
+To find out which images exists please check the [templates](https://github.com/0-complexity/openvcloud_ays/tree/master/_images)
+
+To add custom images [see](https://github.com/0-complexity/openvcloud/blob/master/docs/CloudBrokerPortal/Images/Images.md)
