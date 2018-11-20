@@ -29,8 +29,8 @@ Clicking again the dropdown arrow next to the selection, you can verify that the
 ![](MoreCloudSpaces.png)
 
 Next you will want to read documentation about:
+
 - [Cloud Space Settings](../CloudSpaceSettings/CloudSpaceSettings.md)
-- [Virtual Machines](../CloudSpaceSettings/CloudSpaceSettings.md)
+- [Virtual Machines](../Machines/Machines.md)
 - [Defense Shield](../DefenseShield/DefenseShield.md)
-- [Consumption](../Consumption/Consumption.md)
 - [Machine API](../MachineAPI/MachineAPI.md)

@@ -1,6 +1,6 @@
 # Installer Script Details
 
-The [installer](../scripts/install/installer) script is used to:
+The installer script is used to:
 - Setup the Kubernetes cluster on the controller nodes and deploy the OpenvCloud system containers on the Kubernetes cluster
 - Install JumpScale services on the OpenvCloud cluster nodes
 - Execute IPMI and JumpScale commands on the OpenvCloud cluster nodes
@@ -11,9 +11,9 @@ The script is used as follows:
 installer --version {installation version} --config {system config file path} <command> <subcommand> [other options]
 ```
 
-With `--version` you specify the required release to be installed, e.g. ` 2.3.0`; for all releases check [here](https://github.com/0-complexity/home/tree/master/manifests.
+With `--version` you specify the required available release to be installed, e.g. ` 2.3.0`.
 
-With `--config` you specify the path to the system configuration file, typically `/system-config.yaml`. This file contains all the necessary information for a successful installation using the YAML format. For more details see [Configuration File Details](System-config.md).
+With `--config` you specify the path to the system configuration file, typically `system-config.yaml`. This file contains all the necessary information for a successful installation using the YAML format. For more details see [Configuration File Details](System-config.md).
 
 The script takes following commands:
 - [cluster](#cluster)
@@ -148,5 +148,3 @@ installer --config system-config.yaml image deploy --name image_name
 ```
 
 With `--name` you specify the AYS template of the image package to deploy.
-
-

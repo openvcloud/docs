@@ -1,6 +1,6 @@
 ## Monitor the System Health
 
-The system health is monitored using a collection of JumpScripts, maintained in a private [0-complexity/selfhealing](https://github.com/0-complexity/selfhealing) GitHub repository. Check this private repository in order to get a current view on all JumpScripts. Below is just a snapshot in time.
+Below is just a snapshot in time of the monitoring jumpscripts.
 
 Also check the **JumpScript** page in the **Grid Portal** where you can filter on **monitor.health** to see a list of the JumpScripts actually available on your environment:
 

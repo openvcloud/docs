@@ -29,7 +29,7 @@ The **Action** drop down menu allows you to **edit** group properties or **delet
 <a id="end-user"></a>
 ### End User Portal
 
-Within the **End User Portal** specific user rights are further defined by the end user authorization model, discussed [here](/EndUserPortal/Authorization/AuthorizationModel.md)
+Within the **End User Portal** specific user rights are further defined by the end user authorization model, discussed [here](../../EndUserPortal/Authorization/AuthorizationModel.md)
 
 The **finance** group is a legacy "sub" group of the **user** group. Membership of the **finance** group was required to access the **Consumption** page in the **End User Portal**; this page got however depreciated.
 

@@ -4,8 +4,6 @@ On all physical nodes statistics are gathered and aggregated through Redis.
 
 On the controller of the environment the aggregated data is saved in InfluxDB, from where the statistics can be visualized in the OpenvCloud Operator Portal.
 
-The gathering is done using a collection of JumpScripts, maintained in a private [0-complexity/selfhealing](https://github.com/0-complexity/selfhealing) GitHub repository. Check this private repository in order to get a current view on all JumpScripts. Below is just a snapshot in time.
-
 Also check the **JumpScript** page in the **Grid Portal** where you can filter on **monitoring.processes** to see a list of the JumpScripts actually available on your environment:
 
 ![](JumpScripts.png)  

@@ -51,7 +51,7 @@ Some example repositories:
   - https://docs.greenitglobe.com/gigtech/env_se-sto-en01-001
   - https://docs.greenitglobe.com/digitalenergy/env_mr4
 
-An example of a `system-config.yaml` can be found here: https://github.com/0-complexity/openvcloud_installer/blob/master/scripts/kubernetes/config/system-config.yaml
+An example of a `system-config.yaml` can be found [here](system-config.yaml).
 
 > **Important** A common technique to create a `system-config.yaml` is to make a copy from another environment and start editing. Please make sure to alter the `ssh.private-key` setting, and not just leave the copy from the other environment.
 
@@ -96,7 +96,7 @@ This will create a Kubernetes cluster, and deploy all OpenvCloud system containe
 
 One of these containers is the management container, through which you will be able to check the status of all other containers;discussed next.
 
-To connect to the controller use [teleport](Systemadmin/Connect/teleport.md)
+To connect to the controller use [teleport](../Sysadmin/Connect/teleport.md).
 
 For more details about the `ìnstaller` script see [Installer Script Details](Installer-script.md).
 
@@ -142,7 +142,9 @@ Then choose `cluster deploy` to install the cluster.
 <a id="management-container"></a>
 ## Access the management container
 
-The management container is used to perform various admin operations on the environment. It is based on the management image and has the `kubectl` tool installed that is needed to perform various Kubernetes related operations.
+The management container is used to perform various admin operations on the environment. It is based on the management image and has the `kubectl` tool installed that is needed to perform various Kubernetes related operations. The management container also contains the environemnt system configuration which is necessary to use the `installer` tool inside the pod. The `installer` tool uses the system config by default and it doesn't need to be specified by the user.
+
+For more details about the `ìnstaller` script see [Installer Script Details](Installer-script.md).
 
 Accessing the management container can be done using **0-access**.
 
@@ -168,13 +170,13 @@ You need to be in management container to perform this operation.
 To prepare the CPU and storage nodes with the necessary OS, first start a tmux session and then run the following command:
 
 ```bash
-installer --config {config file} node action --name all install_os
+installer node action --name all install_os
 ```
 
 If a node fails during the installation, use the following command to install the node again:
 
 ```bash
-installer --config {config file} node action --name {node name} install_os
+installer node action --name {node name} install_os
 ```
 
 
@@ -211,16 +213,16 @@ You need to be in management container to perform this operation.
 First start a tmux session. The following command will install the JumpScale services on all OpenvCloud cluster nodes (CPU and storage):
 
 ```bash
-installer --config {config file} node jsaction --name all install
+installer node jsaction --name all install
 ```
 
 If a node fails during the installation, use the following command to install the node again:
 
 ```bash
-installer --config {config file} node jsaction --name {node name} install
+installer node jsaction --name {node name} install
 ```
 
-For more details about the `ìnstaller` script see [Installer Script Details](Installer-script.md).
+For more details about the `ìnstaller` tool see [Installer Script Details](Installer-script.md).
 
 When done, the environment should be ready to use.
 

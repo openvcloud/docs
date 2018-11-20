@@ -1,7 +1,7 @@
 # Teleport
 
 Our teleport is running on all our controllers and is installed during the instalation of the controller.
-It runs as a systemd service and authenticates via github. See [system-config](installation/system-config.md) for details about authentication.
+It runs as a systemd service and authenticates via github. See [system-config](../../Installation/System-config.md) for details about authentication.
 
 Teleports runs under the root domain of the envrionment on port 3080. For example:
 

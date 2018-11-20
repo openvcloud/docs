@@ -13,7 +13,7 @@ See the [section about the End User Portal Authorization Model](../../EndUserPor
 
 Managing who has read, write or admin access at the account level can only be done via the **Accounts** page in the **Cloud Broker Portal**, as documented in the [section about Accounts](../../CloudBrokerPortal/Accounts/Accounts.md).  
 
-Managing who has read, write or admin access at the cloud spaces and virtual machines level is done in the **End User Portal**, as documented in the [sections about Cloud Space Settings](../../EndUserPortal/CloudSpaceSettings/CloudSpaceSettings.md) and the [section about Machines](../../EndUserPortal/Machines/Machines.html) respectivelly.
+Managing who has read, write or admin access at the cloud spaces and virtual machines level is done in the **End User Portal**, as documented in the [sections about Cloud Space Settings](../../EndUserPortal/CloudSpaceSettings/CloudSpaceSettings.md) and the [section about Machines](../../EndUserPortal/Machines/Machines.md) respectivelly.
 
 
 ### Quotas

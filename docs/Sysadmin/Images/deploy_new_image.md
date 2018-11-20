@@ -2,16 +2,7 @@
 
 ### Concept
 
-When a virtual machine is created, some actions need to be done within the guest like resizing of the filesystem, creation of users,... To accomplish this, [cloud-init](https://cloudinit.readthedocs.io/en/latest/index.html) is used. For most Linux distributions OS cloud images with cloud-init preinstalled are readily available for download. The rest of this page assumes you have such an OS image with cloud-init available. There is a guide on [how to create a windows base image with cloudinit](Creating_new_Windwos_Image.md).
-
-
-### Clone the repository of your environment
-
-From a well prepared computer, as documented [here](../Connect/preparing_before_connecting.md), your first step will be to clone the repository of your environment from GitHub:
-
-```
-git clone git@github.com:gig-projects/$name-of-your-env-repository$
-```
+When a virtual machine is created, some actions need to be done within the guest like resizing of the filesystem, creation of users,... To accomplish this, [cloud-init](https://cloudinit.readthedocs.io/en/latest/index.html) is used. For most Linux distributions OS cloud images with cloud-init preinstalled are readily available for download. The rest of this page assumes you have such an OS image with cloud-init available. There is a guide on [how to create a windows base image with cloudinit](Creating_new_Windows_Image.md).
 
 ### Create a new image directory and the AYS service recipe for your new image
 

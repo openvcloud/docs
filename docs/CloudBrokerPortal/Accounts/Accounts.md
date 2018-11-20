@@ -42,7 +42,7 @@ You can grant other users access to the account by clicking the **+ Grant User A
 
 ![](GrantUserAccess.png)
 
-A user can have **read**, **write** or **admin** privileges. See the [End User Portal Authorization Model](/EndUserPortal/Authorization/AuthorizationModel.md) documentation for all details on this.
+A user can have **read**, **write** or **admin** privileges. See the [End User Portal Authorization Model](../../EndUserPortal/Authorization/AuthorizationModel.md) documentation for all details on this.
 
 Click the **X** allows you to revoke user access:
 
@@ -62,10 +62,10 @@ In addition here you to set the external network to which the cloud space needs 
 
 From the list with cloud spaces you can navigate to the **Cloud Space Details** pages.
 
-For more information on **Cloud Spaces** go to the [Cloud Spaces](/CloudBrokerPortal/CloudSpaces/CloudSpaces.md) documentation.
+For more information on **Cloud Spaces** go to the [Cloud Spaces](../CloudSpaces/CloudSpaces.md) documentation.
 
 And finally under **Audits** all REST API calls for the account are listed:
 
 ![](Audits.png)
 
-For more information on **Audits** go to the [Audits](/GridPortal/Audits/Audits.md) documentation.
+For more information on **Audits** go to the [Audits](../../GridPortal/Audits/Audits.md) documentation.
