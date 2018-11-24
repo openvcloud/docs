@@ -186,10 +186,9 @@ installer node action --name {node name} install_os
 From the management container execute:
 
 ```bash
-ssh -A ovs # this will get you on the Open vStorage pod (specially prepared to have systemd)  
 export ENV_NAME="be-g8-3"
 # let's generate the config
-python3 /opt/code/git.gig.tech/openvcloud/openvcloud_installer/scripts/ovs/ovs_configurator.py --config /opt/cfg/system/system-config.yaml
+python3 /opt/code/git.gig.tech/openvcloud/openvcloud_installer/scripts/ovs/ovs_configurator.py
 
 cd /opt/code/github/openvstorage/dev_ops/Ansible/openvstorage/playbooks/
 ansible-playbook -i inventories/$ENV_NAME/inventory preInstall.yml
