@@ -96,7 +96,17 @@ This will create a Kubernetes cluster, and deploy all OpenvCloud system containe
 
 One of these containers is the management container, through which you will be able to check the status of all other containers;discussed next.
 
+Open meneja and download the authorization token:
+
+![Meneja token](images/meneja-token.png)
+
+Save your token as `token`
+
 To connect to the controller use [teleport](../Sysadmin/Connect/teleport.md).
+
+Upload the authorization token:
+At the bottom left press the "Upload files" button, then "Select files" to select your authorization token
+![Upload token](images/teleport-upload.png)
 
 For more details about the `ìnstaller` script see [Installer Script Details](Installer-script.md).
 
@@ -112,24 +122,20 @@ The above command will result in a prompt to enter the password of the specified
 Run the following command to start the cluster installation:
 
 ```bash
-docker run -it --rm -e ENV_OVC_VERSION={version} {docker_registry}/openvcloud/ninstaller:{IMAGE VERSION}
+docker run -it --rm -e ENV_OVC_VERSION={version} -v /tmp:/tmp {docker_registry}/openvcloud/ninstaller:{IMAGE VERSION}
 ```
 
 > It is possible to specify the manifest url directly instead of the version:
 
 ```bash
-docker run -it --rm -e OVC_VERSION_URL={manifest url} {docker_registry}/openvcloud/ninstaller:{IMAGE VERSION}
+docker run -it --rm -e OVC_VERSION_URL={manifest url} -v /tmp:/tmp {docker_registry}/openvcloud/ninstaller:{IMAGE VERSION}
 ```
 
 This will result in the following prompt:
 
 ![ninstaller](images/ninstaller.png)
 
-Follow the instruction in the prompt to get the keycode:
-
-![Meneja token](images/meneja-token.png)
-
-Copy the keycode and paste it to the prompt and enter the password for that key. Select from the next menu the environment to be installed.
+Use "Select Meneja auth key file:" to navigate to your token under `/tmp/token` and enter the password for that key. Select from the next menu the environment to be installed.  
 
 ![Env select](images/env-select.png)
 
