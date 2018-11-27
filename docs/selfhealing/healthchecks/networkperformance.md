@@ -15,7 +15,7 @@ Generates an error if bandwidth is below 10% of the maximum speed
 ```
 #### author: deboeckj@greenitglobe.com
 #### queue: process
-#### scriptname: /opt/code/github/0-complexity/selfhealing/jumpscripts/healthchecks/networkperformance.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/networkperformance.py
 #### roles: ['storagenode', 'storagedriver', 'cpunode']
 #### timeout: 60
 #### async: True

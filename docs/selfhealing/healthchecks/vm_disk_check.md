@@ -11,7 +11,7 @@ Checks the disks of the virtual machines.
 ```
 #### author: zains@codescalers.com
 #### queue: process
-#### scriptname: /opt/code/github/0-complexity/selfhealing/jumpscripts/healthchecks/vm_disk_check.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/vm_disk_check.py
 #### version: 1.0
 #### async: True
 #### organization: jumpscale

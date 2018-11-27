@@ -12,7 +12,7 @@ Inspired by http://pastebin.com/CghxtDHp from Jeffrey Devloo (OVS) <- This link 
 ```
 #### author: geert@greenitglobe.com
 #### queue: process
-#### scriptname: /opt/code/github/0-complexity/selfhealing/jumpscripts/maintenance/disk_garbage_collector.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/maintenance/disk_garbage_collector.py
 #### version: 1.0
 #### async: True
 #### organization: greenitglobe

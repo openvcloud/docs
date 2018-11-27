@@ -16,7 +16,7 @@ For Process queue > 1 min
 #### license: bsd
 #### author: khamisr@codescalers.com
 #### period: 600
-#### scriptname: /opt/code/github/selfhealing/jumpscripts/healthchecks/info_gather_workerstatus.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/info_gather_workerstatus.py
 #### version: 1.0
 #### roles: []
 #### async: True

@@ -12,7 +12,7 @@ Sync alerta to alerta
 #### author: foudaa@greenitglobe.com
 #### period: 60
 #### queue: process
-#### scriptname: /opt/code/github/0-complexity/selfhealing/jumpscripts/maintenance/syncalerts.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/maintenance/syncalerts.py
 #### version: 1.0
 #### roles: ['master']
 #### async: True

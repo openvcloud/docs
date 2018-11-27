@@ -15,7 +15,7 @@ Check the bandwith consumption of the network utilized by the virtual machine
 #### period: 180
 #### queue: process
 #### WARNING_TRESHHOLD: 8000
-#### scriptname: /opt/code/github/0-complexity/selfhealing/jumpscripts/healthchecks/vm_network_load.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/vm_network_load.py
 #### roles: ['cpunode']
 #### timeout: 60
 #### async: True

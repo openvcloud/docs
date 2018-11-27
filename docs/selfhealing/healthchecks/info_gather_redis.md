@@ -6,7 +6,7 @@
 #### license: bsd
 #### author: zains@codescalers.com
 #### period: 600
-#### scriptname: /opt/code/github/selfhealing/jumpscripts/healthchecks/info_gather_redis.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/info_gather_redis.py
 #### version: 1.0
 #### async: True
 #### roles: []

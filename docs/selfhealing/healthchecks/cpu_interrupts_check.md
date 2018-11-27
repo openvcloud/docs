@@ -20,7 +20,7 @@ Result will be shown in the "System Load" section of the Grid Portal / Status Ov
 #### author: christophe@greenitglobe.com
 #### period: 60
 #### startatboot: True
-#### scriptname: /opt/code/github/0-complexity/selfhealing/jumpscripts/healthchecks/cpu_interrupts_check.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/cpu_interrupts_check.py
 #### version: 1.0
 #### async: True
 #### organization: jumpscale

@@ -13,7 +13,7 @@ This script checks if all the nodes have the sshkey from the other nodes authori
 #### author: christophe@greenitglobe.com
 #### period: 60
 #### startatboot: True
-#### scriptname: /opt/code/github/0-complexity/selfhealing/jumpscripts/maintenance/sshkey_check.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/maintenance/sshkey_check.py
 #### version: 1.0
 #### roles: ['cpunode', 'storagenode', 'storagedriver', 'controllernode']
 #### async: True

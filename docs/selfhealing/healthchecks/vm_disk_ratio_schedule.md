@@ -13,7 +13,7 @@ Generates warning if number of disks reached 6 times or more than number of mach
 #### author: foudaa@greenitglobe.com
 #### period: 30 * * * *
 #### queue: process
-#### scriptname: /opt/code/github/0-complexity/selfhealing/jumpscripts/healthchecks/vm_disk_ratio_schedule.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/vm_disk_ratio_schedule.py
 #### version: 1.0
 #### timeout: 60
 #### async: True

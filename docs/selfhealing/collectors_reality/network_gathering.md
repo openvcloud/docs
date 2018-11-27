@@ -12,7 +12,7 @@ Gathers information about the NICs, visualized in the Grid Portal: Grid Node > N
 #### author: kristof@incubaid.com
 #### period: 300
 #### queue: process
-#### scriptname: /opt/code/github/0-complexity/selfhealing/jumpscripts/collectors_reality/network_gathering.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/collectors_reality/network_gathering.py
 #### version: 1.0
 #### roles: ['node']
 #### async: True

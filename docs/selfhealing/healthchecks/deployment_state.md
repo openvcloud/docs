@@ -10,7 +10,7 @@
 ```
 #### author: tareka@codescalers.com
 #### queue: io
-#### scriptname: /opt/code/github/0-complexity/selfhealing/jumpscripts/healthchecks/deployment_state.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/deployment_state.py
 #### version: 1.0
 #### async: True
 #### organization: greenitglobe

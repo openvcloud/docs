@@ -12,7 +12,7 @@ Scheduler that runs on controller that executes the disk_scrub script to scrub d
 #### author: chaddada@greenitglobe.com
 #### period: 0 22 * * *
 #### queue: process
-#### scriptname: /opt/code/github/0-complexity/selfhealing/jumpscripts/maintenance/disk_scrub_schedule.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/maintenance/disk_scrub_schedule.py
 #### version: 1.0
 #### timeout: 60
 #### async: True

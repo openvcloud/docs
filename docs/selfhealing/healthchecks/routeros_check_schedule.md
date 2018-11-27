@@ -12,9 +12,8 @@ Scheduler that runs on master to check for dead RouterOS devices.
 ```
 #### author: thabeta@codescalers.com
 #### queue: process
-#### scriptname: /opt/code/github/0-complexity/selfhealing/jumpscripts/healthchecks/routeros_check_schedule.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/routeros_check_schedule.py
 #### version: 1.0
-#### timeout: 180
 #### async: True
 #### organization: cloudscalers
 #### action_docstring: None

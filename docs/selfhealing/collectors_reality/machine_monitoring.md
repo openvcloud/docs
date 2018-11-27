@@ -11,7 +11,7 @@ Gathers statistics about all virtual machines, visualized in the Grid Portal.
 #### license: bsd
 #### author: deboeckj@incubaid.com
 #### queue: process
-#### scriptname: /opt/code/github/0-complexity/selfhealing/jumpscripts/collectors_reality/machine_monitoring.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/collectors_reality/machine_monitoring.py
 #### version: 1.0
 #### roles: ['node']
 #### async: True

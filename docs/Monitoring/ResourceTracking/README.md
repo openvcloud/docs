@@ -119,23 +119,26 @@ unzip ${ACCOUNT_ID}_${START}.zip -d ${DESTINATION_FOLDER}
 
 As an example you can check the [export_accounts_xls.py](export_accounts_xls.py) demo script that processes all capnp files it finds in `account/year/month/day/hour` and converts it into an Excel document.
 
-
 - First make sure you have the **python-xlwt** package installed:
+
   ```shell
   pip install xlwt
   ```  
 
-- Get the `export_accounts_xls.py` script - requires access to the [0-complexity/openvcloud](https://github.com/0-complexity/openvcloud) repository:
+- Get the `export_accounts_xls.py` script - requires access to the [openvcloud/openvcloud](https://git.gig.tech/openvcloud/openvcloud) repository:
+
   ```bash
-  curl https://raw.githubusercontent.com/0-complexity/openvcloud/master/docs/Monitoring/ResourceTracking/export_accounts_xls.py?$RANDOM > ${DESTINATION_FOLDER}/export_accounts_xls.py
+  curl https://git.gig.tech/openvcloud/openvcloud/raw/master/docs/Monitoring/ResourceTracking/export_accounts_xls.py?private_token=<access token> > ${DESTINATION_FOLDER}/export_accounts_xls.py
   ```
 
-- Get the `resourcemonitoring.capnp` schema - requires access to the [0-complexity/openvcloud](https://github.com/0-complexity/openvcloud) repository:
+- Get the `resourcemonitoring.capnp` schema - requires access to the [openvcloud/openvcloud](https://git.gig.tech/openvcloud/openvcloud) repository:
+
 ```bash
-  curl https://raw.githubusercontent.com/0-complexity/openvcloud/master/libs/CloudscalerLibcloud/CloudscalerLibcloud/schemas/resourcemonitoring.capnp?$RANDOM > ${DESTINATION_FOLDER}/resourcemonitoring.capnp
+  curl https://git.gig.tech/openvcloud/openvcloud/raw/master/libs/CloudscalerLibcloud/CloudscalerLibcloud/schemas/resourcemonitoring.capnp?private_token=<access token> > ${DESTINATION_FOLDER}/resourcemonitoring.capnp
 ```
 
 - Then execute the script:
+
   ```shell
   cd ${DESTINATION_FOLDER}
   ipython export_accounts_xls.py

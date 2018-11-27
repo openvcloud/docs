@@ -12,7 +12,7 @@ Result will be shown in the "Temperature" section of the Grid Portal / Status Ov
 ```
 #### author: thabeta@codescalers.com
 #### queue: process
-#### scriptname: /opt/code/github/0-complexity/selfhealing/jumpscripts/healthchecks/temp_check.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/temp_check.py
 #### version: 1.0
 #### timeout: 60
 #### async: True

@@ -13,7 +13,7 @@ This script puts failed nodes into maintenance
 #### author: chaddada@greenitglobe.com
 #### period: 180
 #### startatboot: True
-#### scriptname: /opt/code/github/0-complexity/selfhealing/jumpscripts/maintenance/node_maintenance.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/maintenance/node_maintenance.py
 #### version: 1.0
 #### roles: ['controller']
 #### async: True

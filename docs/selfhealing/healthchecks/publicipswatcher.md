@@ -13,7 +13,7 @@ Result will be shown in the "Network" section of the Grid Portal / Status Overvi
 #### author: thabeta@codescalers.com
 #### period: 1800
 #### queue: process
-#### scriptname: /opt/code/github/0-complexity/selfhealing/jumpscripts/healthchecks/publicipswatcher.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/publicipswatcher.py
 #### version: 1.0
 #### timeout: 60
 #### async: True

@@ -12,7 +12,7 @@ This script alba proxy restart command every days at 7 in the morning .
 #### license: bsd
 #### author: support@gig.tech
 #### startatboot: False
-#### scriptname: /opt/code/github/0-complexity/selfhealing/jumpscripts/maintenance/alba_proxy_restart.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/maintenance/alba_proxy_restart.py
 #### version: 1.0
 #### roles: ['storagenode']
 #### async: True

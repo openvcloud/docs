@@ -14,7 +14,7 @@ Result will be shown in the "Databases" section of the Grid Portal / Status Over
 #### author: zains@codescalers.com
 #### period: 600
 #### queue: process
-#### scriptname: /opt/code/github/0-complexity/selfhealing/jumpscripts/healthchecks/db_check.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/db_check.py
 #### version: 1.0
 #### roles: ['master']
 #### timeout: 60

@@ -12,7 +12,7 @@ This script to restart halted volumes
 ```
 #### author: support@gig.tech
 #### startatboot: False
-#### scriptname: /opt/code/github/0-complexity/selfhealing/jumpscripts/maintenance/restart_halted_volumes.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/maintenance/restart_halted_volumes.py
 #### version: 1.0
 #### roles: ['storagemaster']
 #### timeout: 600

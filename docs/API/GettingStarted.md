@@ -3,7 +3,7 @@
 - [Swagger UI](#swagger)
 - [Command Line](#curl)
 - [Python](#python)
-- [Jumpscale](#jumpscale)
+- [Portal client](#client)
 
 <a id="swagger"></a>
 ## Swagger UI
@@ -109,11 +109,13 @@ headers = {'Authorization': 'bearer %s' % JWT}
 url= "https://dc-1.demo.greenitglobe.com/restmachine/cloudapi/locations/getUrl"
 resp = requests.post(url, headers=headers)
 ```
-<a id="jumpscale"></a>
-## Using Jumpscale
+<a id="client"></a>
+## Using Portal client
 
-To install jumpscale follow docs [here](https://github.com/Jumpscale/bash)
+If portal code is installed it is possible to use the portal client directly to connect to the OVC API:
 
-It is possible to connect to the api using the jumpscale openvcloud client.
-
-# TODO
+```python
+pcl = j.clients.portal.getByInstance('main')
+# List cloudspaces
+pcl.actors.cloudapi.cloudspaces.list()
+```

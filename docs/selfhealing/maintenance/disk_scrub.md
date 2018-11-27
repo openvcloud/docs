@@ -11,7 +11,7 @@ For each available vdisk it will perform a scrub on it if the stored size is thr
 ```
 #### author: chaddada@greenitglobe.com
 #### queue: process
-#### scriptname: /opt/code/github/0-complexity/selfhealing/jumpscripts/maintenance/disk_scrub.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/maintenance/disk_scrub.py
 #### version: 1.0
 #### async: True
 #### organization: greenitglobe

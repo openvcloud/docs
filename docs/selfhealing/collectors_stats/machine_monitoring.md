@@ -11,7 +11,7 @@ gather statistics about machines
 #### license: bsd
 #### author: deboeckj@incubaid.com
 #### queue: process
-#### scriptname: /opt/code/github/selfhealing/jumpscripts/collectors_stats/machine_monitoring.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/collectors_stats/machine_monitoring.py
 #### version: 1.0
 #### roles: []
 #### async: True

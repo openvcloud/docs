@@ -13,7 +13,7 @@ Result will be shown... WHERE?
 #### author: deboeckj@codescalers.com
 #### period: 3600
 #### queue: process
-#### scriptname: /opt/code/github/0-complexity/selfhealing/jumpscripts/healthchecks/vfws_check.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/vfws_check.py
 #### version: 1.0
 #### roles: ['fw']
 #### async: True

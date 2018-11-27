@@ -16,7 +16,7 @@ Throws WARNING per mount point if >90% used, throws ERROR per mount point if >95
 #### author: zains@codescalers.com
 #### period: 60
 #### queue: process
-#### scriptname: /opt/code/github/0-complexity/selfhealing/jumpscripts/healthchecks/disk_usage_check.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/disk_usage_check.py
 #### version: 1.0
 #### roles: ['node']
 #### timeout: 20

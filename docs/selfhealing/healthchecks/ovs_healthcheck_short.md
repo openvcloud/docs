@@ -13,7 +13,7 @@ Result will be shown in the "OpenvStorage" section of the Grid Portal / Status O
 #### author: foudaa@codescalers.com
 #### period: 180
 #### queue: process
-#### scriptname: /opt/code/github/0-complexity/selfhealing/jumpscripts/healthchecks/ovs_healthcheck_short.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/ovs_healthcheck_short.py
 #### version: 1.0
 #### timeout: 60
 #### async: True

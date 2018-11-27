@@ -12,7 +12,7 @@ Result will be shown in the "Hardware" section of the Grid Portal / Status Overv
 ```
 #### author: thabeta@codescalers.com
 #### queue: process
-#### scriptname: /opt/code/github/0-complexity/selfhealing/jumpscripts/healthchecks/fan_check.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/fan_check.py
 #### version: 1.0
 #### timeout: 20
 #### async: True

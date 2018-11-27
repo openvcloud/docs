@@ -136,7 +136,7 @@ capnp.remove_import_hook()
 resourcemonitoring = "resourcemonitoring.capnp"
 rc_file = Path(resourcemonitoring)
 if not rc_file.exists():
-    r = requests.get("https://raw.githubusercontent.com/0-complexity/openvcloud/master/libs/CloudscalerLibcloud/CloudscalerLibcloud/schemas/resourcemonitoring.capnp?$RANDOM", stream=True)
+    r = requests.get("https://git.gig.tech/openvcloud/openvcloud/raw/master/libs/CloudscalerLibcloud/CloudscalerLibcloud/schemas/resourcemonitoring.capnp?private_token=<access token>", stream=True)
     f = open(resourcemonitoring, 'w')
     f.write (r.text)
     f.close()

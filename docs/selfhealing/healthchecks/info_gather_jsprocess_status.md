@@ -12,7 +12,7 @@ Check if all jsprocesses are running
 #### author: deboeckj@codescalers.com
 #### period: 60
 #### queue: process
-#### scriptname: /opt/code/github/selfhealing/jumpscripts/healthchecks/info_gather_jsprocess_status.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/info_gather_jsprocess_status.py
 #### version: 1.0
 #### roles: []
 #### async: True

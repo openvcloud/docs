@@ -11,7 +11,7 @@ This script make sure any rouge volumedriver is killed by checking its threads c
 #### license: bsd
 #### author: muhamada@greenitglobe.com
 #### queue: process
-#### scriptname: /opt/code/github/0-complexity/selfhealing/jumpscripts/selfhealingutils/volumedriver_memory_get.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/selfhealingutils/volumedriver_memory_get.py
 #### version: 1.0
 #### roles: ['storagedriver']
 #### timeout: 60

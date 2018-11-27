@@ -13,7 +13,7 @@ Generates warning if orphan disks exist on the specified volumes.
 #### author: deboeckj@codescalers.com
 #### period: 30 3 * * *
 #### queue: process
-#### scriptname: /opt/code/github/0-complexity/selfhealing/jumpscripts/healthchecks/disk_orphan_schedule.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/disk_orphan_schedule.py
 #### version: 1.0
 #### timeout: 3600
 #### async: True

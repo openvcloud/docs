@@ -17,7 +17,7 @@ TODO : check these values, specifically if amount of cores per CPU is growing
 #### license: bsd
 #### author: deboeckj@codescalers.com
 #### startatboot: True
-#### scriptname: /opt/code/github/selfhealing/jumpscripts/healthchecks/info_gather_cpu_ctxpy.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/info_gather_cpu_ctxpy.py
 #### version: 1.0
 #### async: True
 #### organization: jumpscale

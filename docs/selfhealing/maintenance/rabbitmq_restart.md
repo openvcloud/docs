@@ -12,7 +12,7 @@ Check if there are partition issues in RabbitMQ. If issues were found it will re
 #### author: chaddada@greenitglobe.com
 #### period: 1800
 #### queue: process
-#### scriptname: /opt/code/github/0-complexity/selfhealing/jumpscripts/maintenance/rabbitmq_restart.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/maintenance/rabbitmq_restart.py
 #### version: 1.0
 #### timeout: 180
 #### async: True

@@ -11,7 +11,7 @@ Scheduler that runs on storagemaster to restart the halted volumes automacticall
 #### author: support@gig.tech
 #### period: 21600
 #### queue: process
-#### scriptname: /opt/code/github/0-complexity/selfhealing/jumpscripts/maintenance/restart_halted_volumes_schedule.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/maintenance/restart_halted_volumes_schedule.py
 #### version: 1.0
 #### timeout: 60
 #### async: True

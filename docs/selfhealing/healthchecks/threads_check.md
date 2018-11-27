@@ -18,7 +18,7 @@ Result will be shown in the "System Load" section of the Grid Portal / Status Ov
 #### license: bsd
 #### author: christophe@greenitglobe.com
 #### startatboot: True
-#### scriptname: /opt/code/github/0-complexity/selfhealing/jumpscripts/healthchecks/threads_check.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/threads_check.py
 #### version: 1.0
 #### roles: ['node']
 #### async: True

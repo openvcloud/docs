@@ -15,7 +15,7 @@ For both memory and CPU usage throws WARNING if more than 80% used and throws ER
 #### license: bsd
 #### author: deboeckj@codescalers.com
 #### startatboot: True
-#### scriptname: /opt/code/github/selfhealing/jumpscripts/healthchecks/info_gather_cpu_mem_core.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/info_gather_cpu_mem_core.py
 #### version: 1.0
 #### async: True
 #### organization: jumpscale

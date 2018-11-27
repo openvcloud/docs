@@ -12,7 +12,7 @@ Result will be shown in the "Orphanage" section of the Grid Portal / Status Over
 ```
 #### author: deboeckj@codescalers.com
 #### queue: process
-#### scriptname: /opt/code/github/0-complexity/selfhealing/jumpscripts/healthchecks/disk_orphan.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/disk_orphan.py
 #### version: 1.0
 #### async: True
 #### organization: cloudscalers

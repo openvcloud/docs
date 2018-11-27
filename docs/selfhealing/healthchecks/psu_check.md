@@ -13,7 +13,7 @@ Result will be shown in the "Hardware" section of the Grid Portal / Status Overv
 #### author: thabeta@codescalers.com
 #### period: 60
 #### queue: process
-#### scriptname: /opt/code/github/0-complexity/selfhealing/jumpscripts/healthchecks/psu_check.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/psu_check.py
 #### version: 1.0
 #### timeout: 20
 #### async: True

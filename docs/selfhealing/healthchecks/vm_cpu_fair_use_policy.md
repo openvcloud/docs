@@ -19,7 +19,7 @@ if quarantined again after unquarantine quarantine time doubles for each time.
 #### license: bsd
 #### author: tareka@greenitglobe.com
 #### startatboot: True
-#### scriptname: /opt/code/github/0-complexity/selfhealing/jumpscripts/healthchecks/vm_cpu_fair_use_policy.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/vm_cpu_fair_use_policy.py
 #### version: 1.0
 #### roles: ['cpunode']
 #### async: True

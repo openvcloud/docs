@@ -10,7 +10,7 @@ Restarts a stopped disk on the right storage router.
 ```
 #### author: geert@greenitglobe.com
 #### queue: process
-#### scriptname: /opt/code/github/0-complexity/selfhealing/jumpscripts/maintenance/disk_restart.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/maintenance/disk_restart.py
 #### version: 1.0
 #### async: False
 #### organization: greenitglobe

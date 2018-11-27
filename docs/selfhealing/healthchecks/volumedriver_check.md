@@ -16,7 +16,7 @@ healthcheck that monitors rouge volumedriver  by checking its threads count and 
 #### period: 300
 #### THREAD_THRESHOLD: 2000
 #### startatboot: True
-#### scriptname: /opt/code/github/0-complexity/selfhealing/jumpscripts/healthchecks/volumedriver_check.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/volumedriver_check.py
 #### version: 1.0
 #### roles: ['storagedriver']
 #### timeout: 3600

@@ -13,7 +13,7 @@ This script pins alba-asd process to the reserved free processes
 #### author: foudaa@greenitglobe.com
 #### period: 0 * * * *
 #### startatboot: False
-#### scriptname: /opt/code/github/0-complexity/selfhealing/jumpscripts/maintenance/pin_alba_process.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/maintenance/pin_alba_process.py
 #### version: 1.0
 #### roles: ['cpunode']
 #### timeout: 60

@@ -12,7 +12,7 @@ Checks the (CPU/disk) temperature of the system.
 #### author: thabeta@codescalers.com
 #### period: 60
 #### queue: process
-#### scriptname: /opt/code/github/0-complexity/selfhealing/jumpscripts/collectors_stats/temp_stats.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/collectors_stats/temp_stats.py
 #### version: 1.0
 #### timeout: 30
 #### async: True

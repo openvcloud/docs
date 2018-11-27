@@ -1,7 +1,7 @@
 
 # JumpScript: vm_orphan.py
         
-#### category: monitor.healthcheck
+#### category: monitor.sealfhealing
 #### enable: True
 #### name: vm_orphan
 #### descr: 
@@ -13,7 +13,7 @@ If orphan disks exist, WARNING is shown in the "Orphanage" section of the Grid P
 #### author: deboeckj@codescalers.com
 #### period: 3600
 #### queue: process
-#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/vm_orphan.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/maintenance/vm_orphan.py
 #### version: 1.0
 #### roles: ['cpunode']
 #### timeout: 60

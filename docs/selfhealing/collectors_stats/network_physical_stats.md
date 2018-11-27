@@ -16,7 +16,7 @@ Gathers following network statistics from the physical machines:
 #### author: deboeckj@codescalers.com
 #### period: 60
 #### queue: process
-#### scriptname: /opt/code/github/0-complexity/selfhealing/jumpscripts/collectors_stats/network_physical_stats.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/collectors_stats/network_physical_stats.py
 #### version: 1.0
 #### roles: ['node']
 #### async: True

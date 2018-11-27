@@ -13,7 +13,7 @@ This script creates an ovs cgroup and assig ovs related processes to it
 #### author: foudaa@greenitglobe.com
 #### period: 0 * * * *
 #### startatboot: False
-#### scriptname: /opt/code/github/0-complexity/selfhealing/jumpscripts/maintenance/ovs_cgroup.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/maintenance/ovs_cgroup.py
 #### version: 1.0
 #### roles: ['cpunode', 'storagedriver']
 #### timeout: 60

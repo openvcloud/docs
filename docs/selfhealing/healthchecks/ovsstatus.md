@@ -14,7 +14,7 @@ Shows WARNING if process not running anymore.
 #### author: khamisr@codescalers.com
 #### period: 60
 #### queue: process
-#### scriptname: /opt/code/github/0-complexity/selfhealing/jumpscripts/healthchecks/ovsstatus.py
+#### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/ovsstatus.py
 #### version: 1.0
 #### async: True
 #### organization: cloudscalers
