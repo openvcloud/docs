@@ -17,4 +17,4 @@ UDP gevent based service, running on a kubernetes pod that receives notification
 
 The jumpscript will try to connect to the node via ssh and if that fails, it will shutdown the node using the IPMI tool then put the node into maintenance.
 
-> The **Uptime monitor** is disabled by default, To enable it you need to set this parameter ```enableUptimeMonitor``` to ```true``` in the grid settings.
+> The **Uptime monitor** is in complaining mode by default, that means it won't take any action on the nodes. To enable it you need to set this parameter ```enableUptimeMonitor``` to ```true``` in the grid settings.
