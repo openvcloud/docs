@@ -1,9 +1,10 @@
-## OpenvCloud Operator's Guide
+# Introduction
 
-The guide starts with an introduction to the [System Architecture](Architecture/SystemArchitecture.md) and the [Network](Architecture/Network/Network.md), and then walks you through the OpenvCloud portals from an operator's perspective:
+The guide starts with an introduction to the [System Architecture](summary/architecture/systemarchitecture.md) and the [Network](summary/architecture/network/), and then walks you through the OpenvCloud portals from an operator's perspective:
 
-- [Cloud Broker Portal](CloudBrokerPortal/CloudBrokerPortal.md)
-- [Grid Portal](GridPortal/GridPortal.md)
-- [End User Portal](EndUserPortal/EndUserPortal.md)
+* [Cloud Broker Portal](summary/cloudbrokerportal/)
+* [Grid Portal](summary/gridportal/)
+* [End User Portal](summary/enduserportal/)
 
-Also covered are [Installation](Installation/Installation.md), [Monitoring](Monitoring/README.md), [System Administration](Sysadmin/sysadmin.md) and [Testing](Testing/Testing.md).
+Also covered are [Installation](summary/installation/installation/), [Monitoring](summary/monitoring/), [System Administration](summary/sysadmin/) and [Testing](summary/testing.md).
+
