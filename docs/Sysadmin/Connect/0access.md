@@ -11,4 +11,4 @@ We can see sessions per nodes by clicking on a node from this list.
 
 The same page also allows starting a new session to this node.
 
-![](0access-console.png)
+![](0acess-connect.png)
