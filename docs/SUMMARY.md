@@ -47,7 +47,7 @@
   * [System configuration](Installation/System-config.md)
   * [Installation](Installation/Installation.md)
     * [Installer script manual](Installation/Installer-script.md)
-* [**Adding, Replacing & Removing Hardware**](Installation/Hardware/Hardware.md)
+* [**Adding, Replacing & Removing Hardware**](Hardware/Hardware.md)
   * [Nodes](Hardware/Nodes/Nodes.md)
     * [OVS Node](Hardware/Nodes/OVS-Node.md)
     * [CPU Node](Hardware/Nodes/CPU-Node.md)

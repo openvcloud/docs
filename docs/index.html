@@ -35,7 +35,7 @@
             var purl = xurl.substring(idx + 1, xurl.length);
             return content.replace(/\[([^\]]*)\]\(([^)]*)\)/g,
               function(x){
-                if (!x.includes("](/")){
+                if (!x.includes("](/") && !x.includes("](http") && !x.includes("](#")){
                   return x.replace("](","]("+purl+"/")    
                 }
                 return x;
