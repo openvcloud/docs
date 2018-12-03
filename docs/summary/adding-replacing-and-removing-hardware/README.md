@@ -1,2 +1,0 @@
-# Adding, Replacing & Removing Hardware
-
