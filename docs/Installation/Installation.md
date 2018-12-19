@@ -122,13 +122,13 @@ The above command will result in a prompt to enter the password of the specified
 Run the following command to start the cluster installation:
 
 ```bash
-docker run -it --rm -e ENV_OVC_VERSION={version} -v /tmp:/tmp {docker_registry}/openvcloud/management:{IMAGE VERSION}
+docker run -it --rm -e ENV_OVC_VERSION={version} -v /tmp:/tmp {docker_registry}/ovcimages/openvcloud/management:{IMAGE VERSION}
 ```
 
 > It is possible to specify the manifest url directly instead of the version:
 
 ```bash
-docker run -it --rm -e OVC_VERSION_URL={manifest url} -v /tmp:/tmp {docker_registry}/openvcloud/management:{IMAGE VERSION}
+docker run -it --rm -e OVC_VERSION_URL={manifest url} -v /tmp:/tmp {docker_registry}/ovcimages/openvcloud/management:{IMAGE VERSION}
 ```
 
 This will result in the following prompt:
