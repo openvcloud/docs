@@ -4,6 +4,7 @@
 - [Command Line](#curl)
 - [Python](#python)
 - [Portal client](#client)
+- [Async calls](#async)
 
 <a id="swagger"></a>
 ## Swagger UI
@@ -118,4 +119,44 @@ If portal code is installed it is possible to use the portal client directly to 
 pcl = j.clients.portal.getByInstance('main')
 # List cloudspaces
 pcl.actors.cloudapi.cloudspaces.list()
+```
+
+
+<a id="async"></a>
+## Calling the api asynchronously
+
+Some API calls are long tasks and they can be blocking in certain cases.
+It is possible to call these functions asynchronously.
+This will return to the user the task guid of that call, which can then be polled to get the state of the job.
+
+This is achieved by sending `_async=True` in the request body.
+An example using the second portal client which allows async calls:
+
+```python
+pcl = j.clients.portal.getByInstance2("main")
+task_guid = pcl.cloudapi.images.create(
+    name=name,
+    url=url,
+    gid=gid,
+    imagetype=type,
+    boottype=bootType,
+    username=username,
+    password=password,
+    accountId=accountId,
+    hotresize=hotResize,
+    _async=True,)
+report = pcl.system.task.get(taskguid=task_guid)
+# Report will return None until the task is completed.
+# When finishing it will return a pair of [Bool, result]. Bool signifies success or failure of that call.
+)
+```
+
+Or by using curl:
+
+```bash
+curl -X POST -H "Authorization: bearer {token}" -d '_async=True' https://dc-1.demo.greenitglobe.com/restmachine/cloudapi/cloudspaces/list
+
+# Will return {taskguid}
+
+curl -X POST -H "Authorization: bearer {token}" -d 'taskguid={taskguid}' https://dc-1.demo.greenitglobe.com/restmachine/system/task/get
 ```
