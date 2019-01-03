@@ -15,6 +15,7 @@ This can be applied to the following configuration settings:
 - [Open vStorage settings](OpenvStorage.md)
 - [Reservation of Host Memory](ReservedHostMemory.md)
 - [Virtual machines retention period](vmretention.md)
+- [Billing retention period](billingretention.md)
 
 
 <a id="set"></a>
