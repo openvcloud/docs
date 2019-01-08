@@ -6,12 +6,14 @@ On the **Grid Nodes** page all nodes are listed:
 
 In the configuration shown above you see a grid of 5 nodes:
 - **ovcmaster** has the **master** role, controlling the grid, and thus controlling all the other grid nodes
-- **be-conv-2-01**, **be-conv-2-02**, **be-conv-2-03**, **be-conv-2-04** are all nodes with the **cpunode** and **storagenode**, physical machines combining storage and computing, this is where the actual virtual machines are running
+- **be-conv-2-01**, **be-conv-2-02**, **be-conv-2-03**, **be-conv-2-04** are all nodes with the **cpunode** and **storagenode** roles, physical machines combining storage and computing, this is where the actual virtual machines are running
 
 
 From the **Grid Nodes** table you can navigate to the **Grid Node Details** page by clicking the name of the grid node:
 
 ![[]](GridNodeDetails.png)
+
+Depending on the roles assigned to a Grid Node you will see different statistics.
 
 #### CPU Statistics
 

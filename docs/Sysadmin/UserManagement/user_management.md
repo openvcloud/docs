@@ -28,4 +28,4 @@ Currently you can not limit the maximum available capacity to a virtual machine 
 
 ### ItsYou.online
 
-For all interactions with an OpenvCloud environment through the Cockpit API, Cockpit Portal, and Cockpit Chatbot authentication and authorization is managed by Itsyou.online.
+For all interactions with an OpenvCloud environment through the Cockpit API, Cockpit Portal, and Cockpit Chatbot authentication and authorization is managed by [Itsyou.online](https://itsyou.online).
