@@ -1,7 +1,7 @@
 # 0-Access
 
 0-Access is running as a pod part of the kubernetes cluster on the controllers.
-Authentication trough 0-Access is handled trough OpenvCloud using the public keys configured in the user's itsyou.online profile.
+Authentication through 0-Access is handled through OpenvCloud using the public keys configured in the user's itsyou.online profile.
 
 ![](0access-nodes.png)
 

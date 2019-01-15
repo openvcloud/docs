@@ -28,7 +28,7 @@ There are 4 possible queues:
 - **IO** queue is typically used for backup/restore and long IO bound related work
 - **Process** is for monitoring related jobs only
 
-<br/>From there you can click trough to the actual JumpScript that was executed:
+<br/>From there you can click through to the actual JumpScript that was executed:
 
 ![[]](JumpScriptDetails.png)
 ![[]](JumpScript.png)
