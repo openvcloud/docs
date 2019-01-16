@@ -1,6 +1,7 @@
 ## Summary
 
 * [**Introduction**](README.md)
+* [**Definitions**](DEFINITIONS.md)
 * [**Architecture**](Architecture/Architecture.md)
   * [System Architecture](Architecture/SystemArchitecture.md)
   * [Network](Architecture/Network/Network.md)
