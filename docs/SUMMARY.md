@@ -70,6 +70,7 @@
   * [Review Logs for User Operations & Automated Tasks](Monitoring/Logs/Logs.md)
   * [Review Audit Logs for Security Alerts](Monitoring/Audits/Audits.md)
   * [Heartbeat](Monitoring/Heartbeat/Heartbeat.md)
+  * [VmImpact](Monitoring/VmImpact/VmImpact.md)
 * [**System Administration**](Sysadmin/sysadmin.md)
   * [User Management](Sysadmin/UserManagement/user_management.md)
   * [Connect to an Environment](Sysadmin/Connect/connect.md)
