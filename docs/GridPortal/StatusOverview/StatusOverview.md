@@ -53,6 +53,10 @@ Depending on the type of node, following sections are available:
 |[Deployment Test](#deployment) |             | X        |              |
 |[OVS Services](#ovs-services)  |             |          | X            |
 
+You can mute / un-mute specific health check [See here](Healthcheck.md):
+
+![](MuteHealthcheck.png)
+
 
 <a id="ays-process"></a>
 ### AYS Process
