@@ -95,3 +95,4 @@
 * [**API**](API/README.md)
   * [Getting started with the OpenvCloud Cloud API](API/GettingStarted.md)
   * [Create Static API Documentation Site](API/OpenAPI2HTML.md)
+  * [Stats](API/stats/README.md)
