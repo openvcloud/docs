@@ -6,7 +6,7 @@
 #### enable: True
 #### descr: 
 ```
-This script executes btrfs balance command every 5 days at 4 in the morning random .
+This script executes btrfs balance command every 5 days at 4 in the morning, randomly .
 
 ```
 #### license: bsd

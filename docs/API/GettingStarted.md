@@ -14,7 +14,7 @@ The **Swagger UI** of the Cloud API is available both in the **End User Portal**
 In the **End User Portal** click the **Machine API** in the top menu bar:
 ![](Images/machineAPI.png)
 
-From there you can for instance click **cloudapi__cloudspaces** which expands all available API end points related to cloud spaces:
+From there you can, for instance, click **cloudapi__cloudspaces** which expands all available API end points related to cloud spaces:
 ![](Images/cloudSpaces.png)
 
 Clicking the **POST /cloudapi/cloudspaces/create** expands a form that allows you to create a cloud space:
@@ -127,7 +127,7 @@ pcl.actors.cloudapi.cloudspaces.list()
 
 Some API calls are long tasks and they can be blocking in certain cases.
 It is possible to call these functions asynchronously.
-This will return to the user the task guid of that call, which can then be polled to get the state of the job.
+This will return to the user the task guide of that call, which can then be polled to get the state of the job.
 
 This is achieved by sending `_async=True` in the request body.
 An example using the second portal client which allows async calls:

@@ -5,7 +5,7 @@
 #### enable: True
 #### descr: 
 ```
-Delete orphan vm and return diskinfo
+Deletes orphan vm and returns diskinfo
 
 ```
 #### license: bsd

@@ -1,4 +1,4 @@
-# Self-healing JumpScripts
+# Self healing JumpScripts
 
 The JumpScripts documented here implement the self-healing capabilities of a G8 environment by monitoring all components and taking appropriate actions.
 

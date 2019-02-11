@@ -1,8 +1,8 @@
 # Transition states of OpenvCloud objects
 
-Transition states are introduced for all OVC objects like **Machines**, **Cloudspaces**, **Accounts**, **Disks**, **Images**, and **Nodes** to ensure that only one action is executed at a time. This is necessary to avoid race conditions caused by running actions concurrently.
+Transition states are introduced for all OVC objects like **Machines**, **Cloudspaces**, **Accounts**, **Disks**, **Images** and **Nodes** to ensure that only one action is executed at a time. This is necessary to avoid race conditions caused by running actions simultaneously.
 
-**Static** state is a state of an OVC object, which does not change unless requested, or forced.
+**Static** state is a state of an OVC object, which does not change unless requested or forced.
 **Transition** state is a state of an OVC object that occurs while transitioning between static states. Each transition state represents an action that is being executed. One or several chained transitions can be necessary to reach from one static state to another.
 Prior to running any action on an OVC object we ensure that transition from the current state to the target state is allowed.
 
@@ -99,15 +99,15 @@ Actions restoring initial state:
 ## Rollback actions
 
 If an action running on an OVC object fails, a 
-Rollback actions should be forseen for every action that can result in failure. Task of an rollback action in to revert changes and restore initial object state.
+Rollback action should be forseen for every action that can result in failure. Task of a rollback action is to revert changes and restore initial object state.
 [objectqueue.py](../../apps/cloudbroker/cloudbrokerlib/objectqueue.py) module is used to handle flow of actions and rollbacks. Examples and explanation how to schedule actions and rollbacks using `ObjectQueue` class can be found [here](ObjectQueue.md).
 
 Diagrams illustrating logic of rollback actions are [here](Actions/).
 
 ## Status handler
 
-* Prior to scheduling an action on an OVC object, the status has to be changed to the corresponding transition state. Exception is automated migration of disks, machines, and cloudspaces. In this case migration should be scheduled on the queue and execute after all previously added actions are executed.
-* Change of states in db should be only done in unified way that guarantees **atomic state change**.
+* Prior to scheduling an action on an OVC object, the status has to be changed to the corresponding transition state. Exception is automated migration of disks, machines and cloudspaces. In this case migration should be scheduled on the queue and executed after all previously added actions are executed.
+* Change of states in db should only be done in unified way that guarantees **atomic state change**.
 
 Validation of the transitions and status handling is implemented in module [`statushandler.py`](../../apps/cloudbroker/cloudbrokerlib/statushandler.py)
 

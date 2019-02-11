@@ -6,7 +6,7 @@
 #### roles: ['storagedriver']
 #### descr: 
 ```
-Check if there are partition issues in RabbitMQ. If issues were found it will restart RabbitMQ. 
+Checks if there are partition issues in RabbitMQ. If issues were found it will restart RabbitMQ. 
 
 ```
 #### author: chaddada@greenitglobe.com

@@ -6,7 +6,7 @@
 #### enable: True
 #### descr: 
 ```
-Find all logs known logs files and executes logs truncate
+Finds all logs on known logs files and executes logs truncate
 
 ```
 #### license: bsd

@@ -32,7 +32,7 @@ Next all virtual firewalls running on that compute node are listed:
 
 ![](VirtualFirewalls.png)
 
-Clicking the **ID** of a virtual firewall will navigate you to **Private Network Details** page for that virtual firewall, and clicking the **Cloud Space ID** links to the **Cloud Space Details** page of the associated cloud space.
+Clicking the **ID** of a virtual firewall will navigate you to **Private Network Details** page for that virtual firewall and clicking the **Cloud Space ID** links to the **Cloud Space Details** page of the associated cloud space.
 
 Under **Virtual Machines** all virtual machines running on the compute node are listed:
 

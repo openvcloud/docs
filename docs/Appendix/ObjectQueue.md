@@ -7,7 +7,7 @@ The **queuer** implements:
 * `chain()` - chain action in case of success of the parent shackle.
 * `chainOnError()` - chain action in case of failure of the parent shackle.
 * `stop()` - graceful termination of a single queue, waits for all queued actions to be executed and then deletes the queue.
-* `terminate()` - graceful termination for all OVC objects, for every object waits for all queued actions to be executed and then deletes the queue.
+* `terminate()` - graceful termination for all OVC objects, every object waits for all queued actions to be executed and then deletes the queue.
 
 ``` py
 # create first shackle

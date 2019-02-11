@@ -2,7 +2,7 @@
 
 First of all you always need to make sure the git repo of the project is always your primary source and updated.
 
-Once this is accomplished connect to the management pod via zero-access. Download your new system-config.yaml and update the pod config.
+Once this is accomplished, connect to the management pod via zero-access. Download your new system-config.yaml and update the pod config.
 
 `installer --config mydownloadedconfig.yaml resources writeconfig`
 

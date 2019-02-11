@@ -6,7 +6,7 @@ The above diagram only shows one cloud space:
 
 - 3 virtual machines
 - 1 virtual firewall
-- 1 virtual switch, connecting the cloud space to the VXLAN (via the VTEP)
+- 1 virtual switch connecting the cloud space to the VXLAN (via the VTEP)
 
 Color scheme:
 

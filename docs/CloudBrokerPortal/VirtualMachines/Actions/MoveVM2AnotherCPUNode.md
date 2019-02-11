@@ -1,4 +1,4 @@
-## Move Virtual Machine to Another CPU Node
+## Move Virtual Machines to Another CPU Node
 
 In order to move a virtual machine to another CPU node you choose **Move to another CPU node** from the **Actions** dropdown menu on the **Virtual Machine Details** page:
 
@@ -12,6 +12,6 @@ This will schedule the **vm_livemigrate** job as listed in the **Jobs** table at
 
 ![](Moving.png)
 
-Once finished, you will be invited with a new pop-up message to refresh the screen:
+Once finished, you will be invited to refresh the screen by receiving a new pop-up message:
 
 ![](MoveFinished.png)

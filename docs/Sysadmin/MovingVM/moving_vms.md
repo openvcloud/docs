@@ -16,7 +16,7 @@ Specify a reason for the move:
 
 ![](Reason.png)
 
-After hitting **Confirm** first a notification will appear start the **move started**:
+After hitting **Confirm** ,a notification will appear **move started**:
 
 ![](Started.png)
 

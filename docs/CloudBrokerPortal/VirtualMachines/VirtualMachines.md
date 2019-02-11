@@ -69,7 +69,7 @@ Adding more port forwards and removing existing ones is easy.
 
 ### Jobs
 
-This table lists all jobs executed on the virtual machine, and the results:
+This table lists all jobs executed on the virtual machine and the results:
 
 ![](Jobs.png)
 

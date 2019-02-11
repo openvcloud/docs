@@ -4,8 +4,8 @@ On the **Grid Nodes** page all nodes are listed:
 
 ![[]](GridNodes.png)
 
-In the configuration shown above you see a grid of 5 nodes:
-- **ovcmaster** has the **master** role, controlling the grid, and thus controlling all the other grid nodes
+In the configuration shown above you can see a grid of 5 nodes:
+- **ovcmaster** has the **master** role, controlling the grid and thus controlling all the other grid nodes
 - **be-conv-2-01**, **be-conv-2-02**, **be-conv-2-03**, **be-conv-2-04** are all nodes with the **cpunode** and **storagenode** roles, physical machines combining storage and computing, this is where the actual virtual machines are running
 
 
@@ -71,7 +71,7 @@ See the [Logs](../Logs/Logs.md) documentation for more information.
 
 #### Error Conditions
 
-This table lists all error that occurred on the node:
+This table lists all errors that occurred on the node:
 
 ![[]](ECOs.png)
 

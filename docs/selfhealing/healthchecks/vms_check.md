@@ -6,7 +6,7 @@
 #### name: vms_check
 #### descr: 
 ```
-Check status of virtual machine.
+Checks status of virtual machine.
 
 ```
 #### author: zains@codescalers.com

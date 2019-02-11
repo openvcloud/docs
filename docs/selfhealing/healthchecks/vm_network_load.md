@@ -6,7 +6,7 @@
 #### log: True
 #### descr: 
 ```
-Check the bandwith consumption of the network utilized by the virtual machine
+Checks the bandwith consumption of the network utilized by the virtual machine
 > 8k packets WARNING
 > 10k packets  ERROR
 

@@ -1,6 +1,6 @@
 # Nodes
 
-An overview of all nodes in a set up. Shown under [http:localhost:82/Grid/Nodes](http:localhost:82/grid/Nodes) ![](Nodes.png)
+An overview of all nodes in a set up are shown under [http:localhost:82/Grid/Nodes](http:localhost:82/grid/Nodes) ![](Nodes.png)
 
 Nodes are sortable and filterable by grid and node IDs, node name, roles the nodes have and their IPs.
 

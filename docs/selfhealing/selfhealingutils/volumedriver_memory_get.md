@@ -5,7 +5,7 @@
 #### enable: True
 #### descr: 
 ```
-This script make sure any rouge volumedriver is killed by checking its threads count and memory consumption
+This script makes sure any rouge volumedriver is killed by checking its thread count and memory consumption
 
 ```
 #### license: bsd

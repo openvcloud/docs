@@ -6,7 +6,7 @@ In order to be able to create a machine, you need to have access to a virtual da
 
 Within the **End User Portal** you can discover to which virtual datacenters you have access by clicking the second link in the top menu bar.
 
-In the below screenshot for example you can see that the logged in user has access to several datacenters, of which two of them created in the 'Account of Yves':
+In the below screenshot, for example, you can see that the logged in user has access to several datacenters, of which two of them created in the 'Account of Yves':
 
 ![](VirtualDatacenters.png)
 
@@ -16,7 +16,7 @@ Once you have selected a virtual datacenter, you can navigate to the **Machines*
 
 ![](VirtualDatacenter.png)
 
-In the below screenshot you see that no virtual machines have been created yet in the **demo-vdc** virtual datacenter:
+In the below screenshot you can see that no virtual machines have been created yet in the **demo-vdc** virtual datacenter:
 
 ![](Machines.png)
 
@@ -52,7 +52,7 @@ As a result you will see this:
 
 ### Actions
 
-The above screenshot shows the **Actions** tab of you newly created machine.
+The above screenshot shows the **Actions** tab of your newly created machine.
 
 Here you can:
 
@@ -75,7 +75,7 @@ You will want to use the very handy paste buttons for the username and initial p
 
 ### Disks
 
-On the **Disks** tab you get add extra data storage to your virtual machine via the **Create disks** subtab:
+On the **Disks** tab you can add extra data storage to your virtual machine via the **Create disks** subtab:
 
 ![](CreateDisks.png)
 
@@ -97,7 +97,7 @@ You can roll back to any of your snapshots or delete a snapshot by clicking one 
 
 ### Change Log
 
-An history of the changes to your virtual machine is shown on the **Change Log** tab:
+A history of the changes to your virtual machine is shown on the **Change Log** tab:
 
 ![](ChangeLog.png)
 

@@ -10,10 +10,10 @@ Checks cpu time and quratines machine according to fair use policy .
 
 If average per 5 min is higher than threshold a warning is sent via email.
 
-if over use presists for longer than warntime  the machine is quarantined to a limit,
+if over use presists for longer than warntime , the machine is quarantined to a limit,
 this is done for a quarantine time and then unquarantined .
 
-if quarantined again after unquarantine quarantine time doubles for each time.
+if quarantined again after unquarantine, quarantine time doubles for each time.
 
 ```
 #### license: bsd

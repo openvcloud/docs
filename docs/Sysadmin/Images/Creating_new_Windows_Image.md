@@ -23,16 +23,16 @@ Follow these steps to prepare the installation:
 
   ![](win-cloud-image-02.png)
 
-  - Then choose memory and CPU settings that suits you then hit **Forward**
+  - Then choose memory and CPU settings that suit you and then hit **Forward**
 
-  - For the storage browse and choose the windows-2012.qcow2 image your created earlier, then click **Forward**
+  - For the storage browse and choose the windows-2012.qcow2 image you created earlier, then click **Forward**
 
   ![](win-cloud-image-03.png)
 
   - Then click **Finish** and start installing the image
 
 
-### After finishing the installation of the image, and shutting the machine down
+### After finishing the installation of the image and shutting the machine down
 
 From Add Hardware:
 
@@ -71,14 +71,14 @@ Repeat all  previous steps for all uninstalled drivers.
 
 Now go to your virtual machine web browser and download Cloudbase init from this [link](https://cloudbase.it/cloudbase-init/).
 
-While installing add Cloudscalers as a new user:
+While installing, add Cloudscalers as a new user:
 
 ![](win-cloud-image-09.png)
 
 
 ### After that we have to make some changes in 2 files
 
-* First goto `C:\Program Files\Cloudbase Solutions\Cloudbase-Init\conf`
+* First go to `C:\Program Files\Cloudbase Solutions\Cloudbase-Init\conf`
 
  - Open `cloudbase-init.conf` file and add this at the end of it:
   ```

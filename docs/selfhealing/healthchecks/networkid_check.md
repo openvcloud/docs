@@ -6,7 +6,7 @@
 #### roles: ['master']
 #### descr: 
 ```
-Checks the status of the available networkids.
+Checks the status of the available network id's.
 Result will be shown in the "Network" section of the Grid Portal / Status Overview / Node Status page.
 
 ```

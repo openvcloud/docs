@@ -1,6 +1,6 @@
 ## Recycle Bin
 
-Recycle Bin page lists all deleted accounts, cloudspaces, Virtual Machines (VMs), disks, images, and iso images unless deleted permanently. The Recycle Bin allows to recover objects within [`delete retention period`](#delete-retention-period), whereafter the objects are deleted permanently and cannot be restored.
+Recycle Bin page lists all deleted accounts, cloudspaces, Virtual Machines (VMs), disks, images and iso images unless deleted permanently. The Recycle Bin allows to recover objects within [`delete retention period`](#delete-retention-period), whereafter the objects are deleted permanently and cannot be restored.
 
 ![](RecycleBin.png)
 
@@ -8,7 +8,7 @@ For OVC objects that must have unique names, like accounts, cloudspaces on the s
 
 ### Actions
 
-Action `destroy all ...` in each section of the Recycle Bin allows to clean up objects of corresponding type.
+Action `destroy all ...` in each section of the Recycle Bin allows to clean up objects of corresponding types.
 
 ![](Actions.png)
 

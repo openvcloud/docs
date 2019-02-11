@@ -4,7 +4,7 @@ Clicking "API" in the **System Portal** brings you to the **Actors Documentation
 
 ![](Images/ActorsDocumentation.png)
 
-Here you find five actor categories, only the first two are supported:
+Here you will find five actor categories, only the first two are supported:
 - **CloudAPI** actors: the API publicly available to all users
 - **CloudBroker** actors: API available only to administrators, providing the functionality as available from the Cloud Broker Portal and the Grid Portal
 

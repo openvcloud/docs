@@ -4,7 +4,7 @@ All **OpenvCloud** components are instrumented, writing useful information to lo
 
 ![](Logs.png)
 
-All columns have filters, and for **Start Time** and **Level** you can specify a range:
+All columns have filters and for **Start Time** and **Level** you can specify a range:
 
 ![](Filter.png)
 

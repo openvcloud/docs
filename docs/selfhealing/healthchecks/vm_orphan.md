@@ -7,7 +7,7 @@
 #### descr: 
 ```
 Checks if libvirt still has VMs that are not known by the system. These VMs are called orphan VMs. Takes into account VMs that have been moved to other CPU nodes.
-If orphan disks exist, WARNING is shown in the "Orphanage" section of the Grid Portal / Status Overview / Node Status page.
+If orphan disks exists, WARNING is shown in the "Orphanage" section of the Grid Portal / Status Overview / Node Status page.
 
 ```
 #### author: deboeckj@codescalers.com

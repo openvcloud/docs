@@ -4,7 +4,7 @@
 #### category: monitor.healthcheck
 #### descr: 
 ```
-Monitors the workers, checking if they report back on regular basis report to their agent for new tasks.
+Monitors the workers, checking if they report back, on regular basis, to their agent for new tasks.
 
 Throws ERROR if WORKERS waits longer than expected:
 For Default queue > 2 mins

@@ -13,7 +13,7 @@
 Every hour a consumption data file per account is generated on the master node.
 
 This involves following three Jumpscripts:
-- `aggregate_account_data.py`: aggregates data from all locations that it gets by executing `collect_account_data.py` on the controller of each location, and stores the result on the master
+- `aggregate_account_data.py`: aggregates data from all locations that it gets by executing `collect_account_data.py` on the controller of each location and stores the result on the master
 - `collect_account_data.py`: per location this script runs on the controller to get the actual data for each account
 - `resmonitoring.py`: this scripts runs on the controller and stores the data on the controller, this data is afterwards collected by the `collect_account_data.py` script
 

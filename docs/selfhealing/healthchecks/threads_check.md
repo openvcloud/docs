@@ -6,7 +6,7 @@
 #### enable: True
 #### descr: 
 ```
-Checks the number of threads, and throw an error if higher than expected.
+Checks the number of threads and throws an error if higher than expected.
 
 Currently throws
 - WARNING if more than 18K threads

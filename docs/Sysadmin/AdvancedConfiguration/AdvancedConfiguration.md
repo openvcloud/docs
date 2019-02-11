@@ -2,12 +2,12 @@
 
 In certain situations it is required to tweak some of our default values. This can be changed on a per grid basis.
 
-This section will explain how to set those configuration and which ones exist.
+This section will explain how to set those configurations and which ones exist.
 
 Here below we discuss how to:
 
-- [Setting advanced configuration values](#set)
-- [Getting advanced configuration values](#get)
+- [Set advanced configuration values](#set)
+- [Get advanced configuration values](#get)
 
 This can be applied to the following configuration settings:
 
@@ -21,7 +21,7 @@ This can be applied to the following configuration settings:
 <a id="set"></a>
 ### Setting values
 
-Open `jsshell` on any node that is part of the grid you want to configure, and type:
+Open `jsshell` on any node that is part of the grid you want to configure and type:
 
 ```python
 from CloudscalerLibcloud.utils.gridconfig import GridConfig
@@ -35,7 +35,7 @@ A config file can be any valid Python object structure (simple types + list and 
 <a id="get"></a>
 ### Getting values
 
-Open `jsshell` on any node that is part of the grid you want to configure, and type:
+Open `jsshell` on any node that is part of the grid you want to configure and type:
 
 ```python
 from CloudscalerLibcloud.utils.gridconfig import GridConfig

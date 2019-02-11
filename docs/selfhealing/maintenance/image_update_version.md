@@ -6,7 +6,7 @@
 #### enable: True
 #### descr: 
 ```
-Checks the last modified timestamp of all images and compare it with the available image in the server and update the image if needed.
+Checks the last modified timestamp of all images and compares it with the available image in the server and updates the image if needed.
 
 ```
 #### license: bsd

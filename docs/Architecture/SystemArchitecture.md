@@ -42,12 +42,12 @@ Since server nodes are not publicly accessible all communication between the **A
 
 ### Datacenter Abstraction Layer
 
-Also implemted by JumpScale 8 Core components is the **Datacenter Abstraction Layer** providing developers an interface to interact with the **Agent Controller**, and thus the server nodes.
+Also implemted by JumpScale 8 Core components is the **Datacenter Abstraction Layer** providing developers an interface to interact with the **Agent Controller** and thus the server nodes.
 
 
 ### Master REST API
 
-Both local and remote interactions with the **Datacenter Abstraction Layer** happens through REST API.
+Both local and remote interactions with the **Datacenter Abstraction Layer** happen through REST API.
 
 
 ### Operator Portal

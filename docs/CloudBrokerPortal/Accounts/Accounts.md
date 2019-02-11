@@ -13,7 +13,7 @@ Clicking the **+ Add Account** link allows you to create a new account:
 
 ![](CreateAccount.png)
 
-If the username you specify doesn't exist yet, a new user will be created, and an activation e-mail will be send to the e-mail address you specify, allowing the user to set his password. In case the user already exists, you can leave the e-mail address field empty.
+If the username you specify doesn't exist yet, a new user will be created and an activation e-mail will be sent to the e-mail address you specify, allowing the user to set his password. In case the user already exists, you can leave the e-mail address field empty.
 
 All the other fields are for setting limits on the total available capacity for the new account:
 
@@ -44,7 +44,7 @@ You can grant other users access to the account by clicking the **+ Grant User A
 
 A user can have **read**, **write** or **admin** privileges. See the [End User Portal Authorization Model](../../EndUserPortal/Authorization/AuthorizationModel.md) documentation for all details on this.
 
-Click the **X** allows you to revoke user access:
+By clicking **X** you can revoke user access:
 
 ![](RevokeUserAccess.png)
 
@@ -56,15 +56,15 @@ The **+ Add Cloud Space** link allows you to add a cloud space to the account:
 
 ![](CreateCloudSpace.png)
 
-Also here you can specify capacity limits, this time specific only to the new cloud space.
+Also here you can specify capacity limits, however this time specifically for the new cloud space.
 
-In addition here you to set the external network to which the cloud space needs to be connected.
+In addition, here you to set the external network to which the cloud space needs to be connected.
 
 From the list with cloud spaces you can navigate to the **Cloud Space Details** pages.
 
 For more information on **Cloud Spaces** go to the [Cloud Spaces](../CloudSpaces/CloudSpaces.md) documentation.
 
-And finally under **Audits** all REST API calls for the account are listed:
+And finally, under **Audits** all REST API calls for the account are listed:
 
 ![](Audits.png)
 

@@ -6,7 +6,7 @@
 #### enable: True
 #### descr: 
 ```
-Checks the amount of swap used by the system, and throws an error if higher than expected.
+Checks the amount of swap used by the system and throws an error if higher than expected.
 
 Currently throws:
 - WARNING if more than 10 GB
