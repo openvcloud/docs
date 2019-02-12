@@ -1,7 +1,6 @@
 ## Summary
 
 * [**Introduction**](README.md)
-* [**Definitions**](DEFINITIONS.md)
 * [**Architecture**](Architecture/Architecture.md)
   * [System Architecture](Architecture/SystemArchitecture.md)
   * [Network](Architecture/Network/Network.md)
@@ -70,7 +69,6 @@
   * [Review Logs for User Operations & Automated Tasks](Monitoring/Logs/Logs.md)
   * [Review Audit Logs for Security Alerts](Monitoring/Audits/Audits.md)
   * [Heartbeat](Monitoring/Heartbeat/Heartbeat.md)
-  * [VmImpact](Monitoring/VmImpact/VmImpact.md)
 * [**System Administration**](Sysadmin/sysadmin.md)
   * [User Management](Sysadmin/UserManagement/user_management.md)
   * [Connect to an Environment](Sysadmin/Connect/connect.md)
@@ -95,4 +93,5 @@
 * [**API**](API/README.md)
   * [Getting started with the OpenvCloud Cloud API](API/GettingStarted.md)
   * [Create Static API Documentation Site](API/OpenAPI2HTML.md)
-  * [Stats](API/stats/README.md)
+  * [Message Pack](API/MessagePack.md)
+  * [Stats](API/Stats/README.md)

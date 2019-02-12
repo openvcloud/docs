@@ -6,7 +6,7 @@
 #### enable: True
 #### descr: 
 ```
-healthcheck that monitors rouge volumedriver  by checking it's thread count and memory consumption
+healthcheck that monitors rouge volumedriver  by checking its threads count and memory consumptio
 
 ```
 #### license: bsd

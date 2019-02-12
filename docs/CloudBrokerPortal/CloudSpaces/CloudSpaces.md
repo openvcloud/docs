@@ -2,7 +2,7 @@
 
 A cloud space is logical grouping of cloud resources, commonly referred to as a tenant.
 
-Each cloud space is associated with one, and only one account. Per account you can have one or more cloud spaces that are all associated with the same account.
+Each cloud space is associated with one, and only one account. Per account you can have one or more cloud spaces, that are all associated with the same account.
 
 The **Cloud Spaces** page lists all cloud spaces:
 
@@ -21,12 +21,12 @@ For each new cloud space a private network (including a virtual firewall) is aut
 
 ![[]](PrivateNetworkDetails.png)
 
-Here you can also see the **Management IP Address** and the **Public IP Address** for the cloud space, as well as all active port forwardings on that private network; discussed below.
+Here you also see the **Management IP Address** and the **Public IP Address** for the cloud space, as well as all active port forwardings on that private network; discussed below.
 
 
 ### Cloud Resource Limits
 
-Here the total available cloud capacity is shown.
+Here the total available cloud capacity is show.
 
 ![](CloudResourceLimits.png)
 
@@ -35,11 +35,11 @@ In order to change the limits you need to select **Edit** from the **Action** dr
 
 #### User Access
 
-In the **Users Access** section you can see all the users with access to the cloud space:
+In the **Users Access** section you see all the users with access to the cloud space:
 
 ![[]](UsersAccess.png)
 
-By clicking the **+ Grant User Access** link you can grant other users access to the cloud space:
+By clicking the **+ Grant User Access** link you can grant other users to the cloud space:
 
 ![[]](GrantUserAccess.png)
 

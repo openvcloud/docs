@@ -8,7 +8,7 @@
 
 ### Removing a CPU node
 
-Steps for replacing a CPU node:
+Steps in order to replace a CPU node:
 
 - **Step 1**: Put the node in Maintenance mode
   - Documented in the [section about putting a node in Maintenance mode](../../Sysadmin/Maintenance/putting_node_in_maintenance_mode.md)
@@ -16,7 +16,7 @@ Steps for replacing a CPU node:
 
     ![](confirm.png)
 
-  - Wait until the node is in Maintenance mode and that all virtual machines have moved to another node
+  - Wait until the node is in Maintenance mode, and that all virtual machines have moved to another node
 
 - **Step 2**: Shutdown the node
 - **Step 3**: Put the node in Decommission mode, documented [here](../../Sysadmin/Decommission/decommission_node.md)

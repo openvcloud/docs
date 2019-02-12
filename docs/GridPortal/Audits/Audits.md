@@ -4,7 +4,7 @@ The **Audits** page lists all important actions along with the username of the u
 
 ![[]](Audits.png)
 
-Like most other tables your can search and filter on all the columns.
+As in most other tables your can search and filter on all the columns.
 
 Clicking the **Time** time stamp brings you to the **Audit Details** page:
 

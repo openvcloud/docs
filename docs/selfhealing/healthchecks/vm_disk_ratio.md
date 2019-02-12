@@ -6,7 +6,7 @@
 #### name: vm_disk_ratio
 #### descr: 
 ```
-Checks if number of disks exceeded 6 times machines
+Check if number of disks exceeded 6 times machines
 
 ```
 #### author: foudaa@greenitglobe.com

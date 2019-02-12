@@ -8,7 +8,7 @@ By clicking the **GID** (Grid ID) you navigate to the **Location Details** page:
 
 ![[]](LocationDetails.png)
 
-Here you can see the number of:
+Here you see the number of:
 - Active accounts
 - Free IP addresses
 - Running virtual machines

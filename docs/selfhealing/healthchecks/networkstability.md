@@ -7,7 +7,7 @@
 #### descr: 
 ```
 Tests network between cpu and storage nodes
-Makes sure all types of networks can reach each other
+Make sure all types of network can reach eachother
 Ping nodes for 10 times
 When less then 90% produce a warning
 When less then 70% procede an error

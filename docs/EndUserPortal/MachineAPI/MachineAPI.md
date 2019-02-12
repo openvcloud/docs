@@ -4,9 +4,9 @@ The **Machine API** can be accessed through the top navigation menu:
 
 ![](MachineAPI.png)
 
-This page is both documenting the various REST APIs and allowing you to test them.
+This page is both documenting the various REST APIs, and allowing you to test them.
 
-All OpenvCloud Portal pages are built on top of these APIs, as exposed by the JumpScale application services.
+All OpenvCloud Portal pages are build on top of these APIs, as exposed by the JumpScale application services.
 
 The APIs are grouped as follows:
 
@@ -20,10 +20,10 @@ The APIs are grouped as follows:
 - sizes 
 - users
 
-Below, an example of using the portforwarding/list API for virtual machine with ID '1357' as part of cloud space (virtual datacenter) with ID '140':
+Below an example of using the portforwarding/list API for virtual machine with ID '1357' as part of cloud space (virtual datacenter) with ID '140':
 
 ![](ListPortforwardingsAPI.png)
 
-When clicking **Try it out!** you will see the below result:
+When click **Try it out!** you see the below result:
 
 ![](TryItOut.png)

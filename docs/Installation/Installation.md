@@ -46,7 +46,7 @@ The following rules apply:
 - The name of the repository should be formatted `env_<<descriptive environment specification>>`, e.g. `env_be-g8-4`
 - The repository needs to be put in an organization that represents the partner or customer, e.g. `gigtech` organization for G8s owned by GIG itself, or `digitalenergy` for our Russian partner
 
-Some examples of repositories:
+Some example repositories:
   - https://docs.greenitglobe.com/gigtech/env_be-g8-4
   - https://docs.greenitglobe.com/gigtech/env_se-sto-en01-001
   - https://docs.greenitglobe.com/digitalenergy/env_mr4
@@ -59,15 +59,15 @@ An example of a `system-config.yaml` can be found [here](system-config.yaml).
 <a id="validate-config"></a>
 ## Validate the configuration file
 
-Having valid configuration is of course very important. Validating is done with the OpenvCloud environment manager, a.k.a. **Meneja** (Swahili for 'manager'), available on https://meneja.gig.tech.
+Having valid configuration is off course very important. Validating is done with the OpenvCloud environment manager, a.k.a. **Meneja** (Swahili for 'manager'), available on https://meneja.gig.tech.
 
-In [Meneja](https://meneja.gig.tech) you can select the environment you are setting up and click the **Validate configuration** button. When your configuration is valid you'll see the following text appear next to the button: **"The configuration is valid!"***
+In [Meneja](https://meneja.gig.tech) you can select the environment you are setting up, and click the **Validate configuration** button. When your configuration is valid, you'll see the following text appear next to the button: **"The configuration is valid!"***
 
 
 <a id="controller-os"></a>
 ## Install the operation system on the controller nodes
 
-On [Meneja](https://meneja.gig.tech) a USB stick can be downloaded that already has the custom configuration for a specific environment. As shown on the screenshot below, there is a link called "Download usb installer image" which results in a bootable ISO file, which can be used to boot from (via the IPMI or via burning it onto a USB stick):
+On [Meneja](https://meneja.gig.tech) a USB stick can be downloaded that already has the custom configuration for a specific environment. As shown on the screenshot below, there is a link called "Download usb installer image" which results in a bootable ISO file, that can be used to boot from (via the IPMI or via burning it onto a USB stick):
 
 ![meneja](images/meneja.png)
 
@@ -75,9 +75,9 @@ After booting up the controller node with the boot image, the user gets a screen
 
 ![meneja boot menu](images/controller_usb_install.png)
 
-The rest is extremely simple. Just select the right option depending on the controller node that needs to be installed and the rest is completely automatic.
+The rest is extremely simple. Just select the right option depending on the controller node that needs to be installed, and the rest is completely automatic.
 
-Once you see the following screen, the installation of the controller node has finished. Just unplug the installer image and reboot the machine.
+Once you see the following screen, the installation of the controller node has finished. Just unplug the installer image, and reboot the machine.
 
 ![boot menu](images/controller_usb_install_2.png)
 
@@ -92,7 +92,7 @@ Repeat this procedure for all three controllers.
 <a id="kubernetes-cluster"></a>
 ### Setup the Kubernetes cluster and deploy the OpenvCloud system containers
 
-This will create a Kubernetes cluster and deploy all OpenvCloud system containers needed to manage an OpenvCloud cluster.
+This will create a Kubernetes cluster, and deploy all OpenvCloud system containers needed to manage an OpenvCloud cluster.
 
 One of these containers is the management container, through which you will be able to check the status of all other containers;discussed next.
 
@@ -122,13 +122,13 @@ The above command will result in a prompt to enter the password of the specified
 Run the following command to start the cluster installation:
 
 ```bash
-docker run -it --rm -e ENV_OVC_VERSION={version} -v /tmp:/tmp {docker_registry}/ovcimages/openvcloud/management:{IMAGE VERSION}
+docker run -it --rm -e ENV_OVC_VERSION={version} -v /tmp:/tmp {docker_registry}/openvcloud/management:{IMAGE VERSION}
 ```
 
 > It is possible to specify the manifest url directly instead of the version:
 
 ```bash
-docker run -it --rm -e OVC_VERSION_URL={manifest url} -v /tmp:/tmp {docker_registry}/ovcimages/openvcloud/management:{IMAGE VERSION}
+docker run -it --rm -e OVC_VERSION_URL={manifest url} -v /tmp:/tmp {docker_registry}/openvcloud/management:{IMAGE VERSION}
 ```
 
 This will result in the following prompt:
@@ -148,7 +148,7 @@ Then choose `cluster deploy` to install the cluster.
 <a id="management-container"></a>
 ## Access the management container
 
-The management container is used to perform various admin operations on the environment. It is based on the management image and has the `kubectl` tool installed that is needed to perform various Kubernetes related operations. The management container also contains the environment system configuration which is necessary to use the `installer` tool inside the pod. The `installer` tool uses the system config by default and it doesn't need to be specified by the user.
+The management container is used to perform various admin operations on the environment. It is based on the management image and has the `kubectl` tool installed that is needed to perform various Kubernetes related operations. The management container also contains the environemnt system configuration which is necessary to use the `installer` tool inside the pod. The `installer` tool uses the system config by default and it doesn't need to be specified by the user.
 
 For more details about the `ìnstaller` script see [Installer Script Details](Installer-script.md).
 

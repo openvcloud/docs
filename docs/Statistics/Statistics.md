@@ -1,6 +1,6 @@
 ## Statistics
 
-OpenvCloud integrates with [Grafana](http://grafana.org/) for data visualization and uses [InfluxDB](http://docs.grafana.org/datasources/influxdb/) for storing all aggregated data gathered through **Redis** from various sources. See [How statistics are gathered](../Monitoring/Statistics/Statistics.md) for more details.
+OpenvCloud integrates with [Grafana](http://grafana.org/) for data visualization, and uses [InfluxDB](http://docs.grafana.org/datasources/influxdb/) for storing all aggregated data gathered through **Redis** from various sources. See [How statistics are gathered](../Monitoring/Statistics/Statistics.md) for more details.
 
 Actual visualization is done via **Grafana Dashboards** which are available in the **Operator Portal** under **Statistics**:
 
@@ -106,7 +106,7 @@ The first panel shows the average, minimum and maximum amount of received data f
 
 ![](Rx.png)
 
-The second panel shows shows the average, minimum and maximum amount of transmitted data for all physical nodes and the details per physical node:
+The second panel shows shows the average, minimum and maximum amount of transmitted data for all physical nodes, and the details per physical node:
 
 ![](Tx.png)
 

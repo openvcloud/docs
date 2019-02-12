@@ -9,4 +9,3 @@
 * [Review Logs for User Operations & Automated Tasks](Logs/Logs.md)
 * [Review Audit Logs for Security Alerts](Audits/Audits.md)
 * [Heartbeat](Heartbeat/Heartbeat.md)
-* [VmImpact](VmImpact/VmImpact.md)

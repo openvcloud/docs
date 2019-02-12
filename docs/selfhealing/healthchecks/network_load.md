@@ -6,7 +6,7 @@
 #### log: True
 #### descr: 
 ```
-Checks the bandwith consumption of the network
+Check the bandwith consumption of the network
 
 ```
 #### author: deboeckj@greenitglobe.com
