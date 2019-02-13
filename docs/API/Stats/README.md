@@ -76,7 +76,7 @@
     * capacity: sum(all disk capacity in cloudspce including snapshots) in `TB`
     * cpu: avg(cpu percentage in use) 
     * memory: allocated memory in `MB`
-    * network: network bandwidth for `IN` and `OUT` for port(interface) of the vm `KB/s`
+    * network: network bandwidth for `IN` and `OUT`
       * usage for vms in and out for all vms in cloudspace in `MB`
       * usage for in and out for vgw and routeros for this cloudspace in `MB`
   * cloudspaceId: id of the cloudspace we want to get its stats
