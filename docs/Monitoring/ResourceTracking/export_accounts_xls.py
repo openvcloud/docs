@@ -31,7 +31,6 @@ URL='https://at-vie-dc01-001.gig.tech/restmachine/cloudapi/'
 
 import os
 from pathlib import Path
-import argparse
 import capnp
 import datetime
 from os import environ
@@ -39,7 +38,6 @@ import sys
 import shutil
 from shutil import copyfile
 import requests
-import json
 import openpyxl
 import zipfile
 

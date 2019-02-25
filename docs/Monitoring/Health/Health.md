@@ -18,7 +18,6 @@ Depending on the type of node, following sections are available:
 
 | Section                       | Master Node | CPU Node | Storage Node |
 |:------------------------------|:-----------:|:--------:|:------------:|
-|[AYS Process](#ays-process)    | X           | X        | X            |
 |[Databases](#databases)        | X           |          |              |
 |[Disks](#disks)                | X           | X        | X            |
 |[JSAgent](#jsagent)            | X           | X        | X            |
@@ -32,11 +31,7 @@ Depending on the type of node, following sections are available:
 |[Node Status](#node)           |             | X        | X            |
 |[Deployment Test](#deployment) |             | X        |              |
 |[OVS Services](#ovs-services)  |             |          | X            |
-
-
-<a id="ays-process"></a>
-### AYS Process
-- **ays_process_check.py** checks if all AYS processes are running and throws an error condition for each process that is not running
+|[OVC Transition States](#ovc-transition-states)| X           |          |              |
 
 
 <a id="system-load"></a>
@@ -115,4 +110,8 @@ Depending on the type of node, following sections are available:
 
 <a id="workers"></a>
 ### Workers
-- **workerstatus_check.py** monitors the workers checking if they report back, on regular basis, to their agent for new tasks
+- **workerstatus_check.py** monitors the workers, checking if they report back on regular basis report to their agent for new tasks
+
+<a id="ovc-transition-states"></a>
+### OVC resources
+- **transition_check.py** recover OVC objects stuck in transition states. Applied to nodes, virtual machines, cloudspaces, accounts, disks. Logic of the healthcheck can be found [here](SelfhealTransitionStates.md).
