@@ -1,4 +1,4 @@
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 # COPYRIGHT (C) 2018-2019 GIG TECHNOLOGY NV
 # ALL RIGHTS RESERVED.
 #
