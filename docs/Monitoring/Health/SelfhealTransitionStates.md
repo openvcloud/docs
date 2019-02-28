@@ -42,7 +42,7 @@ Self-healing script for transition states should recover such objects from trans
 
 ## Disk
 
-* DELETING_ATTACHED_DISK, DESTROYING_ATTACHED_DISK, RESTORING_ATTACHED_DISK: ignore, should be handled together with VM
+* DELETING_ATTACHED_DISK, DESTROYING, RESTORING_ATTACHED_DISK: ignore, should be handled together with VM
 * DELETING_DETACHED_DISK: set status to DELETED
 * RESTORING_ATTACHED_DISK: set status to CREATED
 * DETACHING/ATTACHING/RESIZING:
