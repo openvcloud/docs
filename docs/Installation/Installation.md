@@ -85,8 +85,92 @@ Repeat this procedure for all three controllers.
 
 <a id="configure-switches"></a>
 ## Configure the switches
+configuration of switch should be done like following
+```
+network:
+  backplane:
+    network: 10.107.1.0/24
+  cisco:
+    hostname: be-g8-3
+    ports:
+      controllers:
+        ipmi: 1-3
+        management: 4-6
+      cpunodes:
+        ipmi: 7-15
+        management: 16-24
+      mellanox: 33,34
+      stornodes:
+        ipmi: 25-28
+        management: 29-32
+    switch-ip:
+      address: 10.107.2.201
+      netmask: 255.255.255.0
+    disabled-port-range: 5-11
+    name: 50 port switch
+    password: cisco
+    username: cisco
+    provider-port: 48 # uplink
+    trunk-ports:
+      controllers: 45-47
+      mellanox: 49,50
+  gateway-management:
+    network: 10.199.0.0/22
+    vlan: 2314
+  ipmi:
+    network: 10.107.4.0/24
+    vlan: 2311
+  management:
+    gateway: 10.107.2.254
+    network: 10.107.2.0/24
+    vlan: 2311
+  mellanox:
+    - name: mellanox-1
+      username: admin
+      password: admin
+      disabled-port-range: 1/12-1/16
+      sw-uplinks: 
+          cisco-mlx: 11
+          mlx-mlx: 12
+      storage-ports:
+          split: no
+          ports: 1-4
+      cpu-ports:
+          split: yes
+          ports: 5-7
+      mlag-ip: 122.21.21.12
+      lacp-port-ranges: 1 - 16   # mlag port channel def 
+      provider:
+        port: 46
+        vlan: 2300
+        mlag-channel: 17
+      switch-ip:
+        address: 10.107.2.202
+        netmask: 255.255.255.0
 
-@TODO
+    - name: mellanox-2
+      username: admin
+      password: admin
+      disabled-port-range: 1/12-1/16
+      sw-uplinks: 
+          cisco-mlx: 11
+          mlx-mlx: 12
+      storage-ports:
+          split: no
+          ports: 1-4
+      cpu-ports:
+          split: yes
+          ports: 5-7
+      mlag-ip: 122.21.21.12
+      lacp-port-ranges: 1 - 16
+      provider:
+        port: 48
+        vlan: 2300
+        mlag-channel: 17
+      switch-ip:
+        address: 10.107.2.203
+        netmask: 255.255.255.0
+```
 
 
 <a id="kubernetes-cluster"></a>
