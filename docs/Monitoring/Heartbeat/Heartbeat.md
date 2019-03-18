@@ -16,5 +16,3 @@ UDP gevent based daemon, running on all **cpu**/**storage** nodes and it has two
 UDP gevent based service, running on a kubernetes pod that receives notifications from the uptime daemons when they fail to get an echo form a certain other uptime daemon. When the **Uptime monitor** discovers that more than **50 %** of the uptime daemons report that a certain node is not responding, it starts investigating by running a jumpscript from one of the controller agents.
 
 The jumpscript will try to connect to the node via ssh and if that fails, it will shutdown the node using the IPMI tool then put the node into maintenance.
-
-> The **Uptime monitor** is in complaining mode by default, that means it won't take any action on the nodes. To enable it you need to set this parameter ```enableUptimeMonitor``` to ```true``` in the grid settings.
