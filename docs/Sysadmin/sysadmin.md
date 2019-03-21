@@ -10,3 +10,4 @@
 * [Backend Encryption](BackendEncryption/backend_encryption.md)
 * [Advanced Configuration](AdvancedConfiguration/AdvancedConfiguration.md)
 * [Update SMTP Configuration](UpdateSMTP/updatesmtp.md)
+* [Replace the SSL certificate](SSL/updatessl.md)
