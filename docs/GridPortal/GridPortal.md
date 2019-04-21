@@ -9,4 +9,5 @@
 * [Logs](Logs/Logs.md)
 * [Grid Nodes](GridNodes/GridNodes.md)
 * [Status Overview](StatusOverview/StatusOverview.md)
+* [Mute Healthchecks](MuteHealthchecks/MuteHealthcheck.md)
 * [Virtual Machines](VirtualMachines/VirtualMachines.md)

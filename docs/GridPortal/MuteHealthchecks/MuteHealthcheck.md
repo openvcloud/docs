@@ -17,7 +17,7 @@ When muting a health check, an issue will be created in JIRA on the configured p
 - a comment will be added to the related issue to report the health-check is un-muted
 
 #### configration
-to enable the integration with jira, add the following section to the grid settings:
+to enable the integration with jira, add the following section under ```environment.settings``` section in the system-config configmap:
 ```yml
 jira:
     host: <JIRA hostname>

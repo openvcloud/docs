@@ -53,7 +53,7 @@ Depending on the type of node, following sections are available:
 |[Deployment Test](#deployment) |             | X        |              |
 |[OVS Services](#ovs-services)  |             |          | X            |
 
-You can mute / un-mute specific health check [See here](Healthcheck.md):
+You can mute / un-mute specific health check [See here](../MuteHealthchecks/MuteHealthcheck.md) how to configure it:
 
 ![](MuteHealthcheck.png)
 
