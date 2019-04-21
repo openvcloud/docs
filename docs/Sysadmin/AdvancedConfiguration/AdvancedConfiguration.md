@@ -6,8 +6,7 @@ This section will explain how to set those configurations and which ones exist.
 
 Here below we discuss how to:
 
-- [Set advanced configuration values](#set)
-- [Get advanced configuration values](#get)
+- [Configure advanced values](#config)
 
 This can be applied to the following configuration settings:
 
@@ -18,27 +17,8 @@ This can be applied to the following configuration settings:
 - [Billing retention period](billingretention.md)
 
 
-<a id="set"></a>
-### Setting values
+<a id="config"></a>
+### Configuration values
 
-Open `jsshell` on any node that is part of the grid you want to configure and type:
-
-```python
-from CloudscalerLibcloud.utils.gridconfig import GridConfig
-config = GridConfig()
-config.set('<config key>', <config value>)
-```
-
-A config file can be any valid Python object structure (simple types + list and dict) that is serializable as JSON.
-
-
-<a id="get"></a>
-### Getting values
-
-Open `jsshell` on any node that is part of the grid you want to configure and type:
-
-```python
-from CloudscalerLibcloud.utils.gridconfig import GridConfig
-config = gridconfig()
-configvalue = config.get('<config key>')
-```
+Advanced settings are configured inside the [`system-config`](../../Installation/System-config.md
+) under the `environment.settings`
