@@ -85,35 +85,49 @@ Repeat this procedure for all three controllers.
 
 <a id="configure-switches"></a>
 ## Configure the switches
-configuration of switch should be done like following
+configuration of switch should be done like following in system-config.yaml and it will be configured automatically during installaion
+Note: uplinks will be configured on Cisco or Mellanox based on the production is true or false in the config
 ```
 network:
   backplane:
     network: 10.107.1.0/24
-  cisco:
+  # cisco config start 
+  cisco: 
+  # configure-uplinks explains if we should configure uplinks on this switch or not
+  - configure-uplinks: true
     hostname: be-g8-3
+    name: 50 port switch
+    password: cisco
+    # define which ports connected to which device
     ports:
+      # ports that are connected to the 3 controllers
       controllers:
-        ipmi: 1-3
-        management: 4-6
+        # ports that use it though ipmi to reboot, start and ...etc the nodes
+        ipmi: 46-48
+        # ports that hold internal traffic through management interfaces
+        management: 35,37,13
+      # ports that are connected to cpunodes
       cpunodes:
-        ipmi: 7-15
-        management: 16-24
-      mellanox: 33,34
+        ipmi: 2-5,26-29
+        management: 7-10,31-34
+      mellanox: 38,14
+      # ports that are connected to storage nodes
       stornodes:
-        ipmi: 25-28
-        management: 29-32
+        ipmi: 40,20,19,41
+        management: 16-18,39
+    # provider-port is the port that connects the switch to the internet
+    provider-port: 50
+    # switch serial number
+    serial_number: DNI202500MU
+    # switch-ip defines which ip we should configure the switch with inside the network
     switch-ip:
       address: 10.107.2.201
       netmask: 255.255.255.0
-    disabled-port-range: 5-11
-    name: 50 port switch
-    password: cisco
-    username: cisco
-    provider-port: 48 # uplink
+    # trunk-port defines trunk connections to the controllers and other switches
     trunk-ports:
-      controllers: 45-47
-      mellanox: 49,50
+      controllers: 11,12,45
+      mellanox: 48,49
+    username: cisco
   gateway-management:
     network: 10.199.0.0/22
     vlan: 2314
@@ -124,111 +138,85 @@ network:
     gateway: 10.107.2.254
     network: 10.107.2.0/24
     vlan: 2311
+  # mellanox config
   mellanox:
-    - name: mellanox-1
-      username: admin
-      password: admin
-      disabled-port-range: 1/12-1/16
-      sw-uplinks: 
-          cisco-mlx: 11
-          mlx-mlx: 12
-      storage-ports:
-          split: no
-          ports: 1-4
-      cpu-ports:
-          split: yes
-          ports: 5-7
-      mlag-ip: 122.21.21.12
-      lacp-port-ranges: 1 - 16   # mlag port channel def 
-      provider:
-        port: 46
-        vlan: 2300
-        mlag-channel: 17
-      switch-ip:
-        address: 10.107.2.202
-        netmask: 255.255.255.0
+  # ports connected from mellanox to the cpunodes
+  - cpu-ports:
+      ports: 5-7
+    # define if each port is splited 1 to 4 ends cables or not
+      split: true
 
-    - name: mellanox-2
-      username: admin
-      password: admin
-      disabled-port-range: 1/12-1/16
-      sw-uplinks: 
-          cisco-mlx: 11
-          mlx-mlx: 12
-      storage-ports:
-          split: no
-          ports: 1-4
-      cpu-ports:
-          split: yes
-          ports: 5-7
-      mlag-ip: 122.21.21.12
-      lacp-port-ranges: 1 - 16
-      provider:
-        port: 48
-        vlan: 2300
-        mlag-channel: 17
-      switch-ip:
-        address: 10.107.2.203
-        netmask: 255.255.255.0
+  # lacp-port-ranges defines the mlag channels range
+    lacp-port-ranges: 1 - 16
+  # mlag ip of this switch
+    mlag-ip: 122.21.21.13
+    name: mellanox-1
+    password: admin
+  # provider config will be used if configure-uplinks on this switch is set
+    provider:
+      mlag-channel: 17
+      port: 46
+      vlan: 2300
+  # mellanox to storage nodes ports 
+    storage-ports:
+      ports: 1-4
+      split: false
+  # connection between this switch and other switches
+    sw-uplinks:
+      cisco-mlx: 11
+      mlx-mlx: 12
+    switch-ip:
+      address: 10.107.2.202
+      netmask: 255.255.255.0
+    username: admin
+  # the second mellanox switch
+  - cpu-ports:
+      ports: 5-7
+      split: true
+    mlag-ip: 122.21.21.14
+    name: mellanox-2
+    password: admin
+    provider:
+      mlag-channel: 17
+      port: 48
+      vlan: 2300
+    storage-ports:
+      ports: 1-4
+      split: false
+    sw-uplinks:
+      cisco-mlx: 11
+      mlx-mlx: 12
+    switch-ip:
+      address: 10.107.2.203
+      netmask: 255.255.255.0
+    username: admin
+  # public network vlan
+  public:
+    gateway: 10.101.0.1
+    vlan: 101
+    # public connection type either VRRP or IBPGP
+    connection-type: VRRP
+  storage:
+    network: 10.107.3.0/24
+    vlan: 2315
+  vxbackend:
+    network: 10.240.0.0/16
+    vlan: 2313
+
+
 ```
 
-
-<a id="kubernetes-cluster"></a>
-### Setup the Kubernetes cluster and deploy the OpenvCloud system containers
-
-This will create a Kubernetes cluster and deploy all OpenvCloud system containers needed to manage an OpenvCloud cluster.
-
-One of these containers is the management container, through which you will be able to check the status of all other containers;discussed next.
-
-Open meneja and download the authorization token:
-
-![Meneja token](images/meneja-token.png)
-
-Save your token as `token`
-
-To connect to the controller use [teleport](../Sysadmin/Connect/teleport.md).
-
-Upload the authorization token:
-At the bottom left press the "Upload files" button, then "Select files" to select your authorization token
-![Upload token](images/teleport-upload.png)
-
-For more details about the `ìnstaller` script see [Installer Script Details](Installer-script.md).
-
-To begin the installation you need to first login to the docker registry that contains the needed install image.
-This is done as follows:
-
-```bash
-docker login -u {username} {docker registry}
+<a id="Automatic Installaion">
+## Automatic Installion
+By running the following command you will have your cluster fully installed and deployed
 ```
-
-The above command will result in a prompt to enter the password of the specified account.
-
-Run the following command to start the cluster installation:
-
-```bash
-docker run -it --rm -e ENV_OVC_VERSION={version} -v /tmp:/tmp {docker_registry}/ovcimages/openvcloud/management:{IMAGE VERSION}
+bash  /install.sh -s <PASSWORD> [- u <MANIFESTURL> | -v <VERSION>]
+password is the password you enterned on meneja to download the image
 ```
-
-> It is possible to specify the manifest url directly instead of the version:
-
-```bash
-docker run -it --rm -e OVC_VERSION_URL={manifest url} -v /tmp:/tmp {docker_registry}/ovcimages/openvcloud/management:{IMAGE VERSION}
+example
 ```
-
-This will result in the following prompt:
-
-![ninstaller](images/ninstaller.png)
-
-Use "Select Meneja auth key file:" to navigate to your token under `/tmp/token` and enter the password for that key. Select from the next menu the environment to be installed.  
-
-![Env select](images/env-select.png)
-
-Then choose `cluster deploy` to install the cluster.
-
-![Cluster command](images/cmd-select.png)
-
-![Action select](images/action-select.png)
-
+bash /install.sh -s rooter123 -v 2.4.6
+```
 <a id="management-container"></a>
 ## Access the management container
 
