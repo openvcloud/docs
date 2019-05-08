@@ -232,13 +232,6 @@ From a web browser open the OpenvCloud portal and go to the **0-access** page at
 
 Choose `management` from the list. You will be directed to a page that will allow you to request access to the pod which will redirect you to a page with instructions about how to access the management container and the remaining time for this session.
 
-In the management container you can check the status of all pods using the following command:
-
-```bash
-kubectl get pods
-```
-
-If all pods are running continue to the next step.
 
 <a id="os-nodes"></a>
 ## Installing the operating system on the nodes
