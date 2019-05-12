@@ -100,6 +100,8 @@ network:
     password: cisco
     # define which ports connected to which device
     ports:
+      # total number of ports in the switch
+      count: 50
       # ports that are connected to the 3 controllers
       controllers:
         # ports that use it though ipmi to reboot, start and ...etc the nodes
@@ -140,14 +142,24 @@ network:
     vlan: 2311
   # mellanox config
   mellanox:
-  # ports connected from mellanox to the cpunodes
-  - cpu-ports:
-      ports: 5-7
-    # define if each port is splited 1 to 4 ends cables or not
+  # ports that connects cpu and storage node
+  - nodes:
+    - ports: 1-4,7-10
+      split: false
+    - count: 4
+      enable: 3-4
+      ports: '5'
       split: true
-
-  # lacp-port-ranges defines the mlag channels range
-    lacp-port-ranges: 1 - 16
+    # the count config here explains the number of ports to split each to port
+    - count: 4
+      # which ports are enabled after split
+      enable: 1-2
+      # which ports are we applying this config to
+      ports: '6'
+      split: true
+  - ports:
+      # total number of ports in the switch
+      count: 12
   # mlag ip of this switch
     mlag-ip: 122.21.21.13
     name: mellanox-1
@@ -157,10 +169,6 @@ network:
       mlag-channel: 17
       port: 46
       vlan: 2300
-  # mellanox to storage nodes ports 
-    storage-ports:
-      ports: 1-4
-      split: false
   # connection between this switch and other switches
     sw-uplinks:
       cisco-mlx: 11
@@ -170,9 +178,20 @@ network:
       netmask: 255.255.255.0
     username: admin
   # the second mellanox switch
-  - cpu-ports:
-      ports: 5-7
+  - nodes:
+    - ports: 1-4,7-10
+      split: false
+    - count: 4
+      enable: 3-4
+      ports: '5'
       split: true
+    - count: 4
+      enable: 1-2
+      ports: '6'
+      split: true
+  - ports:
+      # total number of ports in the switch
+      count: 12
     mlag-ip: 122.21.21.14
     name: mellanox-2
     password: admin
@@ -180,9 +199,6 @@ network:
       mlag-channel: 17
       port: 48
       vlan: 2300
-    storage-ports:
-      ports: 1-4
-      split: false
     sw-uplinks:
       cisco-mlx: 11
       mlx-mlx: 12
