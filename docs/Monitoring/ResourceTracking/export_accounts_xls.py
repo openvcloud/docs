@@ -162,38 +162,38 @@ wb = openpyxl.load_workbook(xlsfile)
 ws = wb['a']
 
 idx=8
-ws['A'+str(idx)]= 'Account'
-ws['B'+str(idx)]= 'date'
-ws['C'+str(idx)]=  'Year'
-ws['D'+str(idx)]= 'Month'
-ws['E'+str(idx)]= 'Day'
-ws['F'+str(idx)]= 'Hour'
-ws['G'+str(idx)]= 'Cloud Space ID'
-ws['H'+str(idx)]= 'Machine Count'
-ws['I'+str(idx)]= 'Total Memory'
-ws['J'+str(idx)]= 'Total VCPUs'
-ws['K'+str(idx)]= 'Disk Size'
-ws['L'+str(idx)]= 'Disk IOPS Read'
-ws['M'+str(idx)]= 'Disk IOPS Write'
-ws['N'+str(idx)]= 'NICs TX'
-ws['O'+str(idx)]= 'NICs RX'
-ws['P'+str(idx)]= 'Win'
-ws['Q'+str(idx)]= 'Redhat'
-ws['R'+str(idx)]= '----'
+ws['A'+str(idx)] = 'Account'
+ws['B'+str(idx)] = 'date'
+ws['C'+str(idx)] = 'Year'
+ws['D'+str(idx)] = 'Month'
+ws['E'+str(idx)] = 'Day'
+ws['F'+str(idx)] = 'Hour'
+ws['G'+str(idx)] = 'Cloud Space ID'
+ws['H'+str(idx)] = 'Machine Count'
+ws['I'+str(idx)] = 'Total Memory'
+ws['J'+str(idx)] = 'Total VCPUs'
+ws['K'+str(idx)] = 'Disk Size'
+ws['L'+str(idx)] = 'Disk IOPS Read'
+ws['M'+str(idx)] = 'Disk IOPS Write'
+ws['N'+str(idx)] = 'NICs TX'
+ws['O'+str(idx)] = 'NICs RX'
+ws['P'+str(idx)] = 'Win'
+ws['Q'+str(idx)] = 'Redhat'
+ws['R'+str(idx)] = '----'
 
 mi = []
 ci = []
 
-with zipfile.ZipFile(temp_zipfile) as zfile:
-    for file in zfile.namelist():
-        path_list = file.split(os.sep)
+with zipfile.ZipFile(temp_zipfile) as zfiles:
+    for zfile in zfiles.namelist():
+        path_list = zfile.split(os.sep)
         account = path_list[0]
         year = path_list[1]
         month = path_list[2]
         day = path_list[3]
         hour = path_list[4]
         date = datetime.datetime(int(year),int(month),int(day),int(hour)).strftime('%s')
-        account_obj = resources_capnp.Account.from_bytes(zfile.read(file))
+        account_obj = resources_capnp.Account.from_bytes(zfiles.read(zfile))
         for i, cs in enumerate(account_obj.cloudspaces):
             cs_id = cs.cloudSpaceId
             machines = len(cs.machines)
