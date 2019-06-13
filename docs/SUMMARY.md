@@ -34,6 +34,7 @@
   * [Logs](GridPortal/Logs/Logs.md)
   * [Grid Nodes](GridPortal/GridNodes/GridNodes.md)
   * [Status Overview](GridPortal/StatusOverview/StatusOverview.md)
+  * [Mute Healthchecks](GridPortal/MuteHealthchecks/MuteHealthcheck.md)
   * [Virtual Machines](GridPortal/VirtualMachines/VirtualMachines.md)
 * [**End User Portal**](EndUserPortal/EndUserPortal.md)
   * [Home](EndUserPortal/Home/Home.md)
