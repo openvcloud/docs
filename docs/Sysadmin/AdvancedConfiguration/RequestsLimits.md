@@ -11,7 +11,7 @@ Stricter limitation are placed in the other levels.
 
 ## Per User
 
-The portal server enforces a limit per the user account. If the limit is exceeded it will send a service unavailable response and the user has to wait a certain period before sending requests again.
+The portal server enforces a limit per the user account. If the limit is exceeded it will send a too many requests response and the user has to wait a certain period before sending requests again.
 
 This works by storing each request in redis with the username + timestamp as key with expiration as speified in the config.
 If the number stored at the same time exceeds the allowed limit, no more requests are allowed as long as the limit is still reached.
