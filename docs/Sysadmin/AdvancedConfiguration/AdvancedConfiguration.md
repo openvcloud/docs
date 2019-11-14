@@ -11,7 +11,6 @@ Here below we discuss how to:
 This can be applied to the following configuration settings:
 
 - [Log Archive](LogArchive.md)
-- [Requests limits](RequestsLimits.md)
 - [Open vStorage settings](OpenvStorage.md)
 - [Reservation of Host Memory](ReservedHostMemory.md)
 - [Virtual machines retention period](vmretention.md)

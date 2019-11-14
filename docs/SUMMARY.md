@@ -86,7 +86,6 @@
   * [Backend Encryption](Sysadmin/BackendEncryption/backend_encryption.md)
   * [Advanced Configuration](Sysadmin/AdvancedConfiguration/AdvancedConfiguration.md)
     * [Log Archive](Sysadmin/AdvancedConfiguration/LogArchive.md)
-    * [Requests limits](Sysadmin/AdvancedConfiguration/RequestsLimits.md)
     * [Open vStorage settings](Sysadmin/AdvancedConfiguration/OpenvStorage.md)
     * [Reservation of Host Memory](Sysadmin/AdvancedConfiguration/ReservedHostMemory.md)
     * [Virtual machines retention period](Sysadmin/AdvancedConfiguration/vmretention.md)
