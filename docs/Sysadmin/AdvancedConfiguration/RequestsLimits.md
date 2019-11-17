@@ -30,9 +30,11 @@ If not specified the default settings at `j.core.default_config.DEFAULT_REQUESTS
 ```json
 {"guest": {"requests_count": 10, "requests_expiry": 5},
  "user": {"requests_count": 20, "requests_expiry": 5},
- "server": 10}
+ "server": {"rate_limit": 10, "burst": 20}}
 ```
 
 - `requests_count`: Number of allowed stored requests per user
 - `requests_expiry`: The expiry of each stored request, in sec
-- `server`: The rate of allowed requests per sec
+- `server`:
+  - `rate_limit`: The rate of allowed requests per sec
+  - `burst`: how many requests to consider for a burst before refusing requests
