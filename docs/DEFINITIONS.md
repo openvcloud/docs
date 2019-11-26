@@ -5,6 +5,7 @@ OpenvCloud defines 4 capacity units that are used for billing the end customer:
 - SU or storage units
 - TU or transaction units
 - NU or network units
+- OSU or object storage units
 
 ## CU aka compute units
 - type: **allocation**
@@ -33,3 +34,7 @@ E.g. a vm with 1 bootdisk limited to 2000 iops and 1 datadisk limited to 10000 i
 ## NU aka network units
 - type: **consumption**
 - definition: 1TiB consumed traffic from & towards the virtual firewall or external ip address on a virtual machine
+
+## OSU aka object storage units
+- type: **consumption**
+- definition: 1TiB consumed object storage
