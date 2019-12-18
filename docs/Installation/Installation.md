@@ -78,7 +78,7 @@ Repeat this procedure for all three controllers.
 ## Automatic Installation
 By running the following command you will have your cluster fully installed and deployed
 ```
-bash  /install.sh -s <PASSWORD> [- u <MANIFESTURL> | -v <VERSION>]
+bash  /install.sh -p <PASSWORD> [- u <MANIFESTURL> | -v <VERSION>]
 password is the password you enterned on meneja to download the image
 ```
 example
