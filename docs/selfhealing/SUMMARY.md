@@ -85,8 +85,6 @@
     - [node_maintenance_2.py](maintenance/node_maintenance_2.md)
     - [ovs_cgroup.py](maintenance/ovs_cgroup.md)
     - [rabbitmq_restart.py](maintenance/rabbitmq_restart.md)
-    - [restart_halted_volumes.py](maintenance/restart_halted_volumes.md)
-    - [restart_halted_volumes_schedule.py](maintenance/restart_halted_volumes_schedule.md)
     - [sshkey_check.py](maintenance/sshkey_check.md)
     - [sshkey_check_reflector.py](maintenance/sshkey_check_reflector.md)
     - [syncalerts.py](maintenance/syncalerts.md)
