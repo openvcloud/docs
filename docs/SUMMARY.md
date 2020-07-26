@@ -4,6 +4,7 @@
 * [**Definitions**](DEFINITIONS.md)
 * [**Architecture**](Architecture/Architecture.md)
   * [System Architecture](Architecture/SystemArchitecture.md)
+    * [Cluster guide](Architecture/cluster_guide.md)
   * [Network](Architecture/Network/Network.md)
     * [Physical Network](Architecture/Network/PhysicalNetwork.md)
     * [Logical Network](Architecture/Network/LogicalNetwork.md)
