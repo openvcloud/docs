@@ -2,18 +2,8 @@
 
 In order for a user to have access to the **End User Portal** group membership to the system group **user** is required. For more details about group membership, see the **Groups** page in the **Cloud Broker Portal** and the [Groups Documentation](../../CloudBrokerPortal/Groups/Groups.md).
 
-Once access to the **End User Portal** actual privileges are determined by the rights (read, write, admin) granted to the user, this is done at the level of [Accounts](#account), [Cloud Spaces](#cloud-space), and [Virtual Machines](#virtual-machine).
+Once access to the **End User Portal** actual privileges are determined by the rights (read, write, admin) granted to the user, this at the level of [Accounts](#account), [Cloud Spaces](#cloud-space), and [Virtual Machines](#virtual-machine).
 
-
-### How ACL works
-
-Account, Cloud Space and Virtual Machines have a list of access control also known as ACL.
-An entry in a ACL is called an ACE (access control entry).
-An ACE has a property called explicit.
-
-When we add an ACE to an object let's say for example ADMIN on machine we mark this ACE as explicit, however inside the API we create inexplicit (explicit = false) ACE rules for it's parent objects being account and cloudspace which READ access. This is so that the person who got access on the machine can see which cloudspace/account it belongs to.
-
-An inexplicit R right is NOT able to list ALL objects under need this object, an explicit R right can see all objects under need.
 
 <a id="account"></a>
 ### Account

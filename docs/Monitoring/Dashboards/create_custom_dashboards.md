@@ -22,13 +22,13 @@ For each of them three variants exist:
 - m: values collected per 5 minutes
 - t: total aggregated value 
 
-In what follows, all steps are documented in order to create a simple dashboard visualizing the average read and write IOPS of all virtual machines.
+In what follows all steps are documented in order to create a simple dashboard visualizing the average read and write IOPS of all virtual machines.
 
 The very first step is selecting **+ New** from the **Dashboard** menu:
 
 ![](NewDashboard.png)
 
-You'll get an empty dashboard with one row.
+You'll get an empty dashboard, with one row.
 
 From the hamburger menu on the left of the row select **Add Panel > Graph**:
 
@@ -42,7 +42,7 @@ Still in the **Metrics** tab select **disk.iops.read** as the measurement of the
 
 ![](QueryAFromMeasurement.png)
 
-Next, specify that you only want the values of the virtual disks:
+Next specify that you only want the values of the virtual disks:
 
 ![](QueryAFromType.png)
 
@@ -50,7 +50,7 @@ Add a second query by clicking **+ Add query**:
 
 ![](AddQuery.png)
 
-For the second query select **disk.iops.write** as the measurement and again for the virtual disks:
+For the second query select **disk.iops.write** as the measurement, and again for the virtual disks:
 
 ![](QueryB.png)
 

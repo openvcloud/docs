@@ -12,12 +12,13 @@ In order to check the actual system health go to the **Status Overview** page in
 
 For more information about the **Status Overview** page go to the dedicated section [here](../../GridPortal/StatusOverview/StatusOverview.md).
 
-Below you will see an overview of all JumpScripts, organized in the same way (sections) as on the **Node Status** page.
+In what follows you get overview of all JumpScripts, organized in the same way (sections) as on the **Node Status** page.
 
 Depending on the type of node, following sections are available:
 
 | Section                       | Master Node | CPU Node | Storage Node |
 |:------------------------------|:-----------:|:--------:|:------------:|
+|[AYS Process](#ays-process)    | X           | X        | X            |
 |[Databases](#databases)        | X           |          |              |
 |[Disks](#disks)                | X           | X        | X            |
 |[JSAgent](#jsagent)            | X           | X        | X            |
@@ -31,7 +32,11 @@ Depending on the type of node, following sections are available:
 |[Node Status](#node)           |             | X        | X            |
 |[Deployment Test](#deployment) |             | X        |              |
 |[OVS Services](#ovs-services)  |             |          | X            |
-|[OVC Transition States](#ovc-transition-states)| X           |          |              |
+
+
+<a id="ays-process"></a>
+### AYS Process
+- **ays_process_check.py** checks if all AYS processes are running. Throws an error condition for each process that is not running
 
 
 <a id="system-load"></a>
@@ -41,7 +46,7 @@ Depending on the type of node, following sections are available:
 - **cpu_mem_core_check.py** checks memory and CPU usage/load. If average per hour is higher than expected an error condition is thrown
 - **openfd_check.py** checks the number of open file descriptors for each process
 - **swap_used_check.py** checks the amount of swap used by the system
-- **threads_check.py** checks the number of threads and throws an error if higher than expected
+- **threads_check.py** checks the number of threads, and throw an error if higher than expected
 
 <a id="databases"></a>
 ### Databases
@@ -79,7 +84,7 @@ Depending on the type of node, following sections are available:
 
 <a id="ovs-services"></a>
 ### OVS Services
-- **ovsstatus.py** checks every predefined period (default 60 seconds) if all OVS processes are still running
+- **ovsstatus.py** checks every predefined period (default 60 seconds) if all OVS processes are still run
 
 
 <a id="deployment"></a>
@@ -111,7 +116,3 @@ Depending on the type of node, following sections are available:
 <a id="workers"></a>
 ### Workers
 - **workerstatus_check.py** monitors the workers, checking if they report back on regular basis report to their agent for new tasks
-
-<a id="ovc-transition-states"></a>
-### OVC resources
-- **transition_check.py** recover OVC objects stuck in transition states. Applied to nodes, virtual machines, cloudspaces, accounts, disks. Logic of the healthcheck can be found [here](SelfhealTransitionStates.md).

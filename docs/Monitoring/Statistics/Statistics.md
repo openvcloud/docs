@@ -32,7 +32,7 @@ Also check the **JumpScript** page in the **Grid Portal** where you can filter o
 ### Scripts that run only on the storage nodes
 - **ovs_asd.py**
 - **ovs_backend.py** gathers statistics about the Open vStorage backends
-- **ovs_disk_safety.py** gathers statistics about disk safety and sends these disk safety statistics for each vpool and the amount of namespaces with the lowest disk safety to the database
+- **ovs_disk_safety.py** gathers statistics about disk safety and sends this disk safety statistics for each vpool and the amount of namespaces with the lowest disk safety to the database
 - **ovs_proxyperf.py** gathers statistics about Open vStorage proxy performance
 - **ovs_vdisks.py** gathers statistics about the vDisks
 - **ovs_vpool.py** gathers statistics about the vPools

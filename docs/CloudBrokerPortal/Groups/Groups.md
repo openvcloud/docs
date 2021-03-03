@@ -8,9 +8,9 @@ The **Groups** page lists all groups:
 
 There are three main groups:
 
-- The **user** group for restricting, which users have access to the [End User Portal](#end-user)
-- The **admin** group for restricting, which users have access to the [Operator Portals](#operator)
-- The **ovs_storage** group for restricting, which users have access to the [Storage Portal](#storage)
+- The **user** group for restricting which users have access to the [End User Portal](#end-user)
+- The **admin** group for restricting which users have access to the [Operator Portals](#operator)
+- The **ovs_storage** group for restricing which user have access to the [Storage Portal](#storage)
 
 More details and all other groups are discussed below.
 
@@ -31,7 +31,7 @@ The **Action** drop down menu allows you to **edit** group properties or **delet
 
 Within the **End User Portal** specific user rights are further defined by the end user authorization model, discussed [here](../../EndUserPortal/Authorization/AuthorizationModel.md)
 
-The **finance** group is a legacy "sub" group of the **user** group. Membership of the **finance** group was required to access the **Consumption** page in the **End User Portal**; this page was however depreciated.
+The **finance** group is a legacy "sub" group of the **user** group. Membership of the **finance** group was required to access the **Consumption** page in the **End User Portal**; this page got however depreciated.
 
 <a id="operator"></a>
 ### Operator Portals
@@ -123,7 +123,7 @@ Following **Cloud Broker Portal** actions requires **level1** group membership i
 | Get history of virtual machines                          |
 | List port forwards of virtual machines                   |
 | Create port forwards for virtual machines                |
-| Delete port forwards of virtual machines                |
+| Delete port forwards for virtual machines                |
 | Add disks to virtual machines                            |
 | Delete disks from virtual machines                       |
 | Create templates (images) of virtual machines            |
@@ -140,7 +140,7 @@ Following **Cloud Broker Portal** actions requires **level1** group membership i
 
 
 <a id="level2"></a>
-Following **Stack Details** page actions requires **level2** group membership:
+Following **Stack Details** page actions require **level2** group membership:
 
 - **Enable**
 - **Put in Maintenance**

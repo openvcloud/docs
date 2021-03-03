@@ -1,7 +1,7 @@
 # Installer Script Details
 
 The installer script is used to:
-- Set up the Kubernetes cluster on the controller nodes and deploy the OpenvCloud system containers on the Kubernetes cluster
+- Setup the Kubernetes cluster on the controller nodes and deploy the OpenvCloud system containers on the Kubernetes cluster
 - Install JumpScale services on the OpenvCloud cluster nodes
 - Execute IPMI and JumpScale commands on the OpenvCloud cluster nodes
 - Deploy virtual machine images
@@ -11,9 +11,9 @@ The script is used as follows:
 installer --version {installation version} --config {system config file path} <command> <subcommand> [other options]
 ```
 
-With `--version` you can specify the required available release to be installed, e.g. ` 2.3.0`.
+With `--version` you specify the required available release to be installed, e.g. ` 2.3.0`.
 
-With `--config` you can specify the path to the system configuration file, typically `system-config.yaml`. This file contains all the necessary information for a successful installation using the YAML format. For more details see [Configuration File Details](System-config.md).
+With `--config` you specify the path to the system configuration file, typically `system-config.yaml`. This file contains all the necessary information for a successful installation using the YAML format. For more details see [Configuration File Details](System-config.md).
 
 The script takes following commands:
 - [cluster](#cluster)
@@ -63,7 +63,7 @@ There are four `cluster resources` subcommands:
 <a id="cluster-resources-apply"></a>
 ### cluster resources apply
 
-To apply a specific kubernetes resource
+Apply a specifified kubernetes resource
 Following options are available:
 - `--path` path to template
 
@@ -88,13 +88,13 @@ Usage is as follows
 ### cluster updatedomain
 
 The command `cluster updatedomain` is used to update the SSL certificates and the domain of the environment. This is done by updating the `environment` and/or `certificates` sections in the passed configuration file.
-`ssl` section needs to be updated with a new certificate name for the certificate update, the `subdomane` and `basedomain` for the update domain.
-If adding a new certificate, `certificates` section needs to be updated with a new certificate, chosen from `ssl` section.
+`ssl` section needs to be updated with a new certificate names for the certificate update, the `subdomane` and `basedomain` for the update domain.
+If adding a new certificate, `certificates` section needs to be updated with a new certificate, referenced from `ssl` section.
 
 <a id="cluster-upgrade"></a>
 ### cluster upgrade
 
- Upgrade cluster, updates all nodes and clusters and updates kubernetes resources.
+ Upgrade cluster, update all nodes and cluster and update kubernetes resources.
 
 <a id="node"></a>
 ## node
@@ -116,7 +116,7 @@ with `--name` you specify the name of the CPU/storage node, as configured in the
 
 Following **IPMI** commands are supported:
 - `reboot` reboots the specified node
-- `is_up` checks whether node is up and running
+- `is_up` check whether node is up and running
 - `wait_up` waits untill the node is up and running
 - `enable_pxe` enables PXE on node
 - `disable_pxe` disables PXE on node
@@ -126,7 +126,7 @@ Following **JumpScale** commands are supported:
 - `install` installs JumpsScale services
 - `start` starts JumpScale services
 - `stop` stops JumpScale services r
-- `restart` restarts JumpScale services
+- `restart` restart JumpScale services
 - `update` updates JumpScale services
 
 

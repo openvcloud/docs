@@ -6,7 +6,7 @@
 #### roles: ['storagedriver']
 #### descr: 
 ```
-Updates disks edge ip and port in case its storagedriver is changed.
+Update disks edge ip and port in case its storagedriver is changed.
 
 ```
 #### queue: process

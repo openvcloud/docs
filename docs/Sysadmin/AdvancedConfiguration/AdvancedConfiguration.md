@@ -2,24 +2,42 @@
 
 In certain situations it is required to tweak some of our default values. This can be changed on a per grid basis.
 
-This section will explain how to set those configurations and which ones exist.
+This section will explain how to set those configuration and which ones exist.
 
 Here below we discuss how to:
 
-- [Configure advanced values](#config)
+- [Setting advanced configuration values](#set)
+- [Getting advanced configuration values](#get)
 
 This can be applied to the following configuration settings:
 
 - [Log Archive](LogArchive.md)
-- [Requests limits](RequestsLimits.md)
 - [Open vStorage settings](OpenvStorage.md)
 - [Reservation of Host Memory](ReservedHostMemory.md)
 - [Virtual machines retention period](vmretention.md)
-- [Billing retention period](billingretention.md)
 
 
-<a id="config"></a>
-### Configuration values
+<a id="set"></a>
+### Setting values
 
-Advanced settings are configured inside the [`system-config`](../../Installation/System-config.md
-) under the `environment.settings`
+Open `jsshell` on any node that is part of the grid you want to configure, and type:
+
+```python
+from CloudscalerLibcloud.utils.gridconfig import GridConfig
+config = GridConfig()
+config.set('<config key>', <config value>)
+```
+
+A config file can be any valid Python object structure (simple types + list and dict) that is serializable as JSON.
+
+
+<a id="get"></a>
+### Getting values
+
+Open `jsshell` on any node that is part of the grid you want to configure, and type:
+
+```python
+from CloudscalerLibcloud.utils.gridconfig import GridConfig
+config = gridconfig()
+configvalue = config.get('<config key>')
+```

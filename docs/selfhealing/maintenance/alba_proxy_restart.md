@@ -6,7 +6,7 @@
 #### enable: True
 #### descr: 
 ```
-This script alba proxy restarts command every day at 7 in the morning .
+This script alba proxy restart command every days at 7 in the morning .
 
 ```
 #### license: bsd

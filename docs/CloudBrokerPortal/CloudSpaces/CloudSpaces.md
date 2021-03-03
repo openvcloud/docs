@@ -2,7 +2,7 @@
 
 A cloud space is logical grouping of cloud resources, commonly referred to as a tenant.
 
-Each cloud space is associated with one, and only one account. Per account you can have one or more cloud spaces that are all associated with the same account.
+Each cloud space is associated with one, and only one account. Per account you can have one or more cloud spaces, that are all associated with the same account.
 
 The **Cloud Spaces** page lists all cloud spaces:
 
@@ -21,12 +21,12 @@ For each new cloud space a private network (including a virtual firewall) is aut
 
 ![[]](PrivateNetworkDetails.png)
 
-Here you can also see the **Management IP Address** and the **Public IP Address** for the cloud space, as well as all active port forwardings on that private network; discussed below.
+Here you also see the **Management IP Address** and the **Public IP Address** for the cloud space, as well as all active port forwardings on that private network; discussed below.
 
 
 ### Cloud Resource Limits
 
-Here the total available cloud capacity is shown.
+Here the total available cloud capacity is show.
 
 ![](CloudResourceLimits.png)
 
@@ -35,11 +35,11 @@ In order to change the limits you need to select **Edit** from the **Action** dr
 
 #### User Access
 
-In the **Users Access** section you can see all the users with access to the cloud space:
+In the **Users Access** section you see all the users with access to the cloud space:
 
 ![[]](UsersAccess.png)
 
-By clicking the **+ Grant User Access** link you can grant other users access to the cloud space:
+By clicking the **+ Grant User Access** link you can grant other users to the cloud space:
 
 ![[]](GrantUserAccess.png)
 
@@ -75,13 +75,8 @@ Form data:
 * **Machine Name**: New name for the machine to import
 * **Machine Description**: Description for new machine 
 * **Import Link**: `HTTP(S)` link to your WebDAV server
-* **OVA Path**: Path toward the directory on your WebDAV server where the export data lives or the OVA file
+* **OVF Path**: Path toward the directory on your WebDAV server where the export data lives
 * **Username for Link**: Username for your WebDAV server
-* **Password for Link**: Password for your WebDAV server
-* **Boot Type**: The way the Virtual Machine boots BIOS or UEFI
-* **Nr of VCPUs**: Amount of Virtual CPUs to assign to the Virtual Machine
-* **Amount of Memory**: Amount of Memory to assign to the Virtual Machine in MiB
+* **Password for Link**: Password` for your WebDAV server
 * **Memory**: Choose the memory you would like to assign to your new machine
-* **Private IP**: Private IP Address assigned to the NIC connected to the Cloudspace network ( leave empty to assign it automatically)
-
 

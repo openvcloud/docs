@@ -6,7 +6,7 @@
 #### roles: ['cpunode']
 #### descr: 
 ```
-Inspects the qemu log files of running VMs and reports if there were any errors.
+Inspects the qemu log files of running VMs and reports if there was any errors.
 
 ```
 #### author: thabeta@codescalers.com

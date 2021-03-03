@@ -34,18 +34,18 @@ On the **Stack Details** page select **Put in Maintenance** from the **Actions**
 <a id="move"></a>
 #### Choose to stop or move all virtual machines
 
-In the **Confirm Action Put in Maintenance** dialog window you have two options:
+In the **Confirm Action Put in Maintenance** dialog window you have too options:
 
   - **Move All Virtual Machines** in order to have all running virtual machines currently hosted on the selected node moved to another node. As a result these virtual machines stay available during maintenance, hosted on other nodes. This is the preferred option since it also moves all system created virtual machines, particularly the virtual machines running the RouterOS operating system that are created for each cloud space, providing vital functions such as the virtual firewalls.
 
-  - **Stop All Virtual Machines** which will just stop all running virtual machines currently hosted on the selected node. As a result, when re-enabling the node (once maintenance is finished), all the stopped virtual machines will automatically get restarted on this node, while during maintenance the virtual machines are not available.
+  - **Stop All Virtual Machines** which will just stop all running virtual machines currently hosted on the selected node. As a result, when reenabling the node (once maintenance is finished), all the stopped virtual machines will automatically get restarted on this node, while during maintenance the virtual machines are not available.
 
   ![](confirm.png)
 
 
 > **Important Warning**
 >
-> Be aware that the **Stopping All Virtual Machines** option also stops all virtual machines that are created by the system. These virtual machines are not listed on the  **Stack Details** page. This is particularly very dangerous for the virtual firewalls that are set up for each cloud space, as the system creates for each cloud space a virtual machine running the RouterOs operating system for this and other important purposes.
+> Be aware that the **Stopping All Virtual Machines** option also stops all virtual machines that are created by the system. These virtual machines are not listed on the  **Stack Details** page. This is particularly very dangerous for the virtual firewalls that are setup for each cloud space, as the system creates for each cloud space a virtual machine running the RouterOs operating system for this and other important purposes.
 >
 > Check the **Virtual Machines** page in the **Grid Portal** and filter on '*router*' to have an overview of all Virtual Firewalls and where they are running:
 
@@ -53,9 +53,9 @@ In the **Confirm Action Put in Maintenance** dialog window you have two options:
 
 **Note**
 
-Alternatively you might prefer to manually move each or some of the virtual machines individually, allowing you to decide yourself to which node the virtual machines should be moved. Even in that case, after having moved some or all of the virtual machines manually, you still want to use the **Move All Virtual Machines** option in order to make sure that the system-created virtual machines discussed above also get moved, making sure all vital functionality provided by the RouterOS stays active.
+Alternatively you might prefer to manually move each or some of the virtual machines individually, allowing you to decide yourself to which node the virtual machines should be moved. Even in that case, after having moved some or all of the virtual machines manually, you still will want to use the **Move All Virtual Machines** option in order to make sure also the system-created virtual machines discussed above get moved, making sure all vital functionality provided by the RouterOS stays active.
 
-In case you really prefer to do everything manually, you should also move the system-created virtual machines yourself, this by going to the **Private Network Details** page and using the **Move VFW** action.
+In case you really prefer to do everything manually, you also move the system-created virtual machines your self, this by going to the **Private Network Details** page and using the **Move VFW** action.
 
 <a id="post"></a>
 ### Post reboot actions
@@ -124,7 +124,7 @@ jumpscale       jsagent              main        100 RUNNING  4446
 openvcloud      vncproxy             main        100 RUNNING  8091
 ```
 
-All services should be running if this is not the case try to start them with
+All services should be running if this is not the cat try to start them with
 
 ```
 ays start
@@ -135,7 +135,7 @@ ays start
 
 Virtual machines and virtual firewalls are not automatically restarted after a reboot, a manual restart is required.
 
-This can be accomplished by putting the node back to **Enabled** mode. In order to do so select **Enable** from the **Actions** menu on the **Stack Details** page of the rebooted node:
+This can be accomplished by putting the node back **Enabled** mode. In order to do so select **Enable** from the **Actions** menu on the **Stack Details** page of the rebooted node:
 
 ![](enable.png)
 
