@@ -3,6 +3,7 @@
         
 #### category: monitor.healthcheck
 #### enable: True
+#### roles: ['node']
 #### descr: 
 ```
 Checks status of all physical disks and partitions on all nodes, reporting back the free disk space on mount points.
@@ -12,15 +13,12 @@ Checks status of all physical disks and partitions on all nodes, reporting back 
 Throws WARNING per mount point if >90% used, throws ERROR per mount point if >95% used.
 
 ```
-#### license: bsd
 #### author: zains@codescalers.com
 #### period: 60
 #### queue: process
 #### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/disk_usage_check.py
 #### version: 1.0
-#### roles: ['node']
 #### timeout: 20
-#### async: True
 #### organization: jumpscale
 #### action_docstring: None
 #### log: True

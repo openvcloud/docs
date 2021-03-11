@@ -14,7 +14,6 @@ Checks whether virtual machine is pingable.
 #### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/vm_ping.py
 #### version: 1.0
 #### roles: ['fw']
-#### async: True
 #### organization: jumpscale
 #### action_docstring: None
 #### log: False

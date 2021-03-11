@@ -14,7 +14,6 @@ Result will be shown in the "Network" section of the Grid Portal / Status Overvi
 #### queue: process
 #### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/routeros_check.py
 #### version: 1.0
-#### async: True
 #### organization: greenitglobe
 #### action_docstring: None
 #### log: True

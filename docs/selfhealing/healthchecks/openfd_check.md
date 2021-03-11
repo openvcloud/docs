@@ -15,8 +15,7 @@ Result will be shown in the "System Load" section of the Grid Portal / Status Ov
 #### queue: process
 #### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/openfd_check.py
 #### version: 1.0
-#### timeout: 10
-#### async: True
+#### timeout: 30
 #### organization: greenitglobe
 #### action_docstring: None
 #### log: True

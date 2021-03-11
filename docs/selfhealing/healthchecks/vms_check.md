@@ -6,7 +6,7 @@
 #### name: vms_check
 #### descr: 
 ```
-Checks status of virtual machine.
+Check status of virtual machine.
 
 ```
 #### author: zains@codescalers.com
@@ -15,7 +15,6 @@ Checks status of virtual machine.
 #### version: 1.0
 #### roles: ['master']
 #### timeout: 60
-#### async: True
 #### organization: jumpscale
 #### action_docstring: None
 #### log: False

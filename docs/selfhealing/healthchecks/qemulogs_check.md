@@ -2,11 +2,11 @@
 # JumpScript: qemulogs_check.py
         
 #### category: monitor.healthcheck
-#### enable: True
+#### enable: False
 #### roles: ['cpunode']
 #### descr: 
 ```
-Inspects the qemu log files of running VMs and reports if there were any errors.
+Inspects the qemu log files of running VMs and reports if there was any errors.
 
 ```
 #### author: thabeta@codescalers.com
@@ -15,7 +15,6 @@ Inspects the qemu log files of running VMs and reports if there were any errors.
 #### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/qemulogs_check.py
 #### version: 1.0
 #### timeout: 60
-#### async: True
 #### organization: cloudscalers
 #### action_docstring: None
 #### log: True

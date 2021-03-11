@@ -15,7 +15,6 @@ Problems are reported in the "Hardware" section of the Grid Portal / Status Over
 #### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/networkbond_check.py
 #### version: 1.0
 #### timeout: 60
-#### async: True
 #### organization: cloudscalers
 #### action_docstring: None
 #### log: True

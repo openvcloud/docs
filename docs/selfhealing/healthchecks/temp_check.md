@@ -15,7 +15,6 @@ Result will be shown in the "Temperature" section of the Grid Portal / Status Ov
 #### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/temp_check.py
 #### version: 1.0
 #### timeout: 60
-#### async: True
 #### organization: cloudscalers
 #### action_docstring: None
 #### log: True

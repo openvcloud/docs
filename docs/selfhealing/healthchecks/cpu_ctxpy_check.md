@@ -2,8 +2,8 @@
 # JumpScript: cpu_ctxpy_check.py
         
 #### category: monitor.healthcheck
-#### queue: process
 #### enable: True
+#### log: True
 #### descr: 
 ```
 Checks the number of CPU context switches per second. If higher than expected an error condition is thrown.
@@ -17,14 +17,11 @@ Result will be shown in the "System Load" section of the Grid Portal / Status Ov
 TODO : check these values, specifically if amount of cores per CPU is growing
 
 ```
-#### license: bsd
 #### author: deboeckj@codescalers.com
-#### startatboot: True
+#### queue: process
 #### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/cpu_ctxpy_check.py
 #### version: 1.0
 #### roles: ['node']
-#### async: True
 #### organization: jumpscale
 #### action_docstring: None
 #### order: 1
-#### log: True

@@ -4,12 +4,12 @@
 #### category: monitor.maintenance
 #### queue: process
 #### enable: True
+#### log: False
 #### descr: 
 ```
 This script creates an ovs cgroup and assig ovs related processes to it
 
 ```
-#### license: bsd
 #### author: foudaa@greenitglobe.com
 #### period: 0 * * * *
 #### startatboot: False
@@ -17,8 +17,6 @@ This script creates an ovs cgroup and assig ovs related processes to it
 #### version: 1.0
 #### roles: ['cpunode', 'storagedriver']
 #### timeout: 60
-#### async: True
 #### organization: jumpscale
 #### action_docstring: None
 #### order: 1
-#### log: False

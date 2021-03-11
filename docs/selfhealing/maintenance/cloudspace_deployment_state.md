@@ -6,13 +6,13 @@
 #### roles: ['master']
 #### descr: 
 ```
+Redeploy cloudspaces that are in status virtual
 
 ```
-#### author: tareka@codescalers.com
+#### author: jo@gig.tech
 #### queue: process
 #### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/maintenance/cloudspace_deployment_state.py
 #### version: 1.0
-#### async: True
 #### organization: greenitglobe
 #### action_docstring: None
 #### log: True

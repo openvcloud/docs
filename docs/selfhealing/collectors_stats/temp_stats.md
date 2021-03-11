@@ -15,7 +15,6 @@ Checks the (CPU/disk) temperature of the system.
 #### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/collectors_stats/temp_stats.py
 #### version: 1.0
 #### timeout: 30
-#### async: True
 #### organization: cloudscalers
 #### action_docstring: None
 #### log: False

@@ -15,8 +15,7 @@ Result will be shown in the "OpenvStorage" section of the Grid Portal / Status O
 #### queue: process
 #### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/ovs_healthcheck_short.py
 #### version: 1.0
-#### timeout: 60
-#### async: True
+#### timeout: 120
 #### organization: cloudscalers
 #### action_docstring: None
 #### log: True

@@ -18,7 +18,6 @@ Generates an error if bandwidth is below 10% of the maximum speed
 #### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/networkperformance.py
 #### roles: ['storagenode', 'storagedriver', 'cpunode']
 #### timeout: 60
-#### async: True
 #### organization: cloudscalers
 #### action_docstring: None
 #### order: 1

@@ -3,10 +3,10 @@
         
 #### category: monitor.healthcheck
 #### enable: True
-#### roles: ['controller']
+#### roles: ['master']
 #### descr: 
 ```
-Scheduler that runs on controller to check for disks/vms ratio
+Scheduler that runs on master to check for disks/vms ratio
 Generates warning if number of disks reached 6 times or more than number of machines.
 
 ```
@@ -16,6 +16,5 @@ Generates warning if number of disks reached 6 times or more than number of mach
 #### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/vm_disk_ratio_schedule.py
 #### version: 1.0
 #### timeout: 60
-#### async: True
 #### organization: cloudscalers
 #### action_docstring: None

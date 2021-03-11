@@ -6,7 +6,7 @@
 #### roles: ['master']
 #### descr: 
 ```
-Checks the status of the available network id's.
+Checks the status of the available networkids.
 Result will be shown in the "Network" section of the Grid Portal / Status Overview / Node Status page.
 
 ```
@@ -16,7 +16,6 @@ Result will be shown in the "Network" section of the Grid Portal / Status Overvi
 #### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/networkid_check.py
 #### version: 1.0
 #### timeout: 60
-#### async: True
 #### organization: cloudscalers
 #### action_docstring: None
 #### log: True

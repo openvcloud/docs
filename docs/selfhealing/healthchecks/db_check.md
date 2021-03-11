@@ -2,7 +2,6 @@
 # JumpScript: db_check.py
         
 #### category: monitor.healthcheck
-#### license: bsd
 #### enable: True
 #### name: info_gather_db
 #### descr: 
@@ -18,7 +17,6 @@ Result will be shown in the "Databases" section of the Grid Portal / Status Over
 #### version: 1.0
 #### roles: ['master']
 #### timeout: 60
-#### async: True
 #### organization: jumpscale
 #### action_docstring: None
 #### log: True

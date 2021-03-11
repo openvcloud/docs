@@ -3,10 +3,10 @@
         
 #### category: monitor.healthcheck
 #### enable: True
-#### roles: ['controller']
+#### roles: ['master']
 #### descr: 
 ```
-Scheduler that runs on controller to check for orphan disks on specific volume driver nodes.
+Scheduler that runs on master to check for orphan disks on specific volume driver nodes.
 Generates warning if orphan disks exist on the specified volumes.
 
 ```
@@ -16,6 +16,5 @@ Generates warning if orphan disks exist on the specified volumes.
 #### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/maintenance/disk_garbage_collector_schedule.py
 #### version: 1.0
 #### timeout: 60
-#### async: True
 #### organization: greenitglobe
 #### action_docstring: None

@@ -7,7 +7,7 @@
 #### descr: 
 ```
 Tests network between cpu and storage nodes
-Makes sure all types of networks can reach each other
+Make sure all types of network can reach eachother
 Ping nodes for 10 times
 When less then 90% produce a warning
 When less then 70% procede an error
@@ -23,7 +23,6 @@ Otherwise produces an error message
 #### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/networkstability.py
 #### roles: ['storagenode', 'storagedriver', 'cpunode']
 #### timeout: 60
-#### async: True
 #### organization: cloudscalers
 #### action_docstring: None
 #### order: 1

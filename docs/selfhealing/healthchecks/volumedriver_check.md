@@ -4,12 +4,12 @@
 #### category: monitor.healthcheck
 #### queue: process
 #### enable: True
+#### log: True
 #### descr: 
 ```
-healthcheck that monitors rouge volumedriver  by checking it's thread count and memory consumption
+healthcheck that monitors rouge volumedriver  by checking its threads count and memory consumptio
 
 ```
-#### license: bsd
 #### author: muhamada@greenitglobe.com
 #### VOLUMEDRIVER_NAME: volumedriver_fs
 #### MEMORY_THRESHOLD: 0.4
@@ -19,9 +19,7 @@ healthcheck that monitors rouge volumedriver  by checking it's thread count and 
 #### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/volumedriver_check.py
 #### version: 1.0
 #### roles: ['storagedriver']
-#### timeout: 3600
-#### async: True
+#### timeout: 250
 #### organization: jumpscale
 #### action_docstring: None
 #### order: 1
-#### log: True

@@ -2,22 +2,14 @@
 # JumpScript: node_maintenance.py
         
 #### category: monitor.maintenance
-#### queue: process
-#### enable: True
+#### roles: ['controllernode']
 #### descr: 
 ```
-This script puts failed nodes into maintenance
+This script is executed by the uptime monitor to investigate a node and take the right action to heal it
 
 ```
-#### license: bsd
-#### author: chaddada@greenitglobe.com
-#### period: 180
-#### startatboot: True
+#### queue: process
 #### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/maintenance/node_maintenance.py
 #### version: 1.0
-#### roles: ['controller']
-#### async: True
 #### organization: jumpscale
 #### action_docstring: None
-#### order: 1
-#### log: False

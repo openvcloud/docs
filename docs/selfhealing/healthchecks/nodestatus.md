@@ -17,7 +17,7 @@ Result will be shown in the "Node Status" section of the Grid Portal / Status Ov
 #### queue: process
 #### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/nodestatus.py
 #### version: 1.0
-#### async: True
+#### timeout: 60
 #### organization: cloudscalers
 #### action_docstring: None
 #### log: True

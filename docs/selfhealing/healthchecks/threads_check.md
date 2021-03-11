@@ -2,11 +2,11 @@
 # JumpScript: threads_check.py
         
 #### category: monitor.healthcheck
-#### queue: process
 #### enable: True
+#### log: True
 #### descr: 
 ```
-Checks the number of threads and throws an error if higher than expected.
+Checks the number of threads, and throw an error if higher than expected.
 
 Currently throws
 - WARNING if more than 18K threads
@@ -15,14 +15,11 @@ Currently throws
 Result will be shown in the "System Load" section of the Grid Portal / Status Overview / Node Status page.
 
 ```
-#### license: bsd
 #### author: christophe@greenitglobe.com
-#### startatboot: True
+#### queue: process
 #### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/threads_check.py
 #### version: 1.0
 #### roles: ['node']
-#### async: True
 #### organization: jumpscale
 #### action_docstring: None
 #### order: 1
-#### log: True

@@ -3,12 +3,12 @@
         
 #### category: disk.monitoring
 #### enable: True
+#### log: False
 #### descr: 
 ```
 Gathers statistics about Open vStorage proxy performance.
 
 ```
-#### license: bsd
 #### author: christophe@greenitglobe.com
 #### period: 60
 #### queue: process
@@ -16,8 +16,6 @@ Gathers statistics about Open vStorage proxy performance.
 #### version: 1.0
 #### roles: ['storagedriver']
 #### timeout: 30
-#### async: True
 #### organization: jumpscale
 #### action_docstring: Send OVS proxy performance statistics to DB
 #### order: 1
-#### log: False

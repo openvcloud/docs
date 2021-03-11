@@ -6,7 +6,7 @@
 #### log: True
 #### descr: 
 ```
-Checks the bandwith consumption of the network utilized by the virtual machine
+Check the bandwith consumption of the network utilized by the virtual machine
 > 8k packets WARNING
 > 10k packets  ERROR
 
@@ -18,7 +18,6 @@ Checks the bandwith consumption of the network utilized by the virtual machine
 #### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/vm_network_load.py
 #### roles: ['cpunode']
 #### timeout: 60
-#### async: True
 #### organization: cloudscalers
 #### action_docstring: None
 #### order: 1

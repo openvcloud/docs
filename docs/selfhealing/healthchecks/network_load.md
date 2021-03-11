@@ -6,7 +6,7 @@
 #### log: True
 #### descr: 
 ```
-Checks the bandwith consumption of the network
+Check the bandwith consumption of the network
 
 ```
 #### author: deboeckj@greenitglobe.com
@@ -15,7 +15,6 @@ Checks the bandwith consumption of the network
 #### scriptname: /opt/code/git.gig.tech/openvcloud/openvcloud/libs/agent-scripts/jumpscripts/healthchecks/network_load.py
 #### roles: ['storagenode', 'storagedriver', 'cpunode']
 #### timeout: 60
-#### async: True
 #### organization: cloudscalers
 #### action_docstring: None
 #### order: 1
