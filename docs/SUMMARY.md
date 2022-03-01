@@ -68,7 +68,6 @@
   * [Create Custom Dashboards](Monitoring/Dashboards/create_custom_dashboards.md)
   * [External Network Addresses](Monitoring/Network/Network.md)
   * [Storage Utilization](Monitoring/Storage/Storage.md)
-  * [Resource Consumption Tracking](Monitoring/ResourceTracking/README.md)
   * [Review Logs for User Operations & Automated Tasks](Monitoring/Logs/Logs.md)
   * [Review Audit Logs for Security Alerts](Monitoring/Audits/Audits.md)
   * [Heartbeat](Monitoring/Heartbeat/Heartbeat.md)
