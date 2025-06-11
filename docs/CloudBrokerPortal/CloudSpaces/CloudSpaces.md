@@ -78,7 +78,7 @@ Form data:
 * **OVA Path**: Path toward the directory on your WebDAV server where the export data lives or the OVA file
 * **Username for Link**: Username for your WebDAV server
 * **Password for Link**: Password for your WebDAV server
-* **Boot Type**: The way the Virtual Machine boots BIOS or UEFI
+* **Boot Type**: The way the Virtual Machine boots BIOS, UEFI or UEFI-SECURE-BOOT
 * **Nr of VCPUs**: Amount of Virtual CPUs to assign to the Virtual Machine
 * **Amount of Memory**: Amount of Memory to assign to the Virtual Machine in MiB
 * **Memory**: Choose the memory you would like to assign to your new machine
