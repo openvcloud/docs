@@ -11,6 +11,7 @@ The system-config is divided in several sections:
 - [Environment](#environment)
 - [Certificates](#certificates)
 - [Nodes](#nodes)
+- [Storageclasses](#storage_classes)
 - [Others](#others)
 
 <a id="support"></a>
@@ -306,6 +307,71 @@ nodes: # Environment nodes info
     management:
       macaddress: 0C:C4:7A:AC:11:36
 ```
+
+<a id="storage_classes"></a>
+## Storageclasses
+
+Storageclasses allow a grid to offer different storage options with different pricing and capabilities to its users. Storageclasses are defined in the top level `storage_classes` list, each `external_storage` entry references one of them through its `storage_class` attribute.
+
+```yaml
+storage_classes:
+  - id: ceph-standard
+    name: Ceph Standard
+    description: Ceph based standard performance storage
+    su_multiplier: 2
+    supports_templates: true
+```
+
+| attribute | required | description |
+|-----------|----------|-------------|
+| `id` | yes | unique id of the storage_class, used as the `storage_class` parameter of the disk and machine APIs |
+| `name` | yes | display name shown to the user |
+| `description` | no | description shown to the user |
+| `su_multiplier` | no | multiplier applied to the storage units (SU) billed for disks of this storage class: `size/1024 * su_multiplier`. Defaults to `1`. |
+| `supports_templates` | no | whether template images may be stored on this storage class. Defaults to `false`. |
+
+### External storage
+
+An entry of the `external_storage` list can be associated with a storage class using its `storage_class` attribute:
+
+```yaml
+external_storage:
+  - name: ceph-storage
+    storage_class: ceph-standard
+    pools:
+      - name: ceph-thin-pool-1
+```
+
+Disks created for a storage class are provisioned on the pools of the `external_storage` entries referencing it. A storage class that is not referenced by any `external_storage` entry cannot be used.
+
+### whitesky.cloud Storage
+
+The built-in whitesky.cloud storage (OpenvStorage) is a fixed storage class with the id `ws_sds`. It does not need to be defined in the `storage_classes` list and is available when the grid runs OpenvStorage (i.e. when the grid has nodes with the `storage` role).
+
+### Default storage class
+
+When a machine or disk is created without a `storage_class` parameter, boot (B) and data (D) disks default to:
+
+1. `ws_sds`, when OpenvStorage is available on the grid
+2. otherwise, the `storage_class` of the first `external_storage` entry that defines one
+
+Disks of the other types (P, C, M) do not get a storage class.
+
+### Image template placement
+
+When an image is created or a new image version is updated, a template copy is placed on every template supporting backend, so a machine can boot from the image on any of them:
+
+1. whitesky.cloud Storage (`ws_sds`), when OpenvStorage is available. This copy is created first from the image URL (MD5 verified) and is the sync source for the other backends.
+2. one copy per subscribed `external_storage` entry whose `storage_class` supports templates (entries without a `storage_class` qualify). These copies are synced from the previous copy instead of re-downloading.
+3. as the final step the OVS copies are marked as templates. This happens after all other backends have their copy, because marking a volume as template stops it on OpenvStorage, which would make the openvstorage:// sync source unreachable while the other backends are still syncing from it. Until that step the OVS copies are regular running volumes.
+
+If a backend fails during create or update, the operation is all-or-nothing: the copies already created are destroyed (on an update the previous version stays active).
+
+Boot disk placement uses the template copy matching the boot disk's `storage_class` and clones into that copy's pool. Creating a machine with a boot disk `storage_class` that has no image template copy fails with a 400: update or recreate the image to fill in the missing template.
+
+CD-ROM images are the exception: they are stored as a single copy on whitesky.cloud Storage when available, otherwise on the pools of the default storage class. On grids without OpenvStorage with multiple blocks subscribing to different `external_storage` entries, a CD-ROM can only be attached by machines in blocks subscribed to the entry it was placed on.
+
+Note that template jobs run on a node that must see the pools of the target entry. On multi-block grids where different blocks subscribe to different `external_storage` entries, the sync copies between those entries require a node that sees both pools.
 
 <a id="others"></a>
 ## Other various settings
