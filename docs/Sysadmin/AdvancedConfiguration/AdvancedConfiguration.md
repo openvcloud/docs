@@ -16,7 +16,6 @@ This can be applied to the following configuration settings:
 - [Reservation of Host Memory](ReservedHostMemory.md)
 - [Virtual machines retention period](vmretention.md)
 - [Billing retention period](billingretention.md)
-- [Nested Virtualization](NestedVirtualization.md)
 
 
 <a id="config"></a>
