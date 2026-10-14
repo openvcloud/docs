@@ -377,8 +377,10 @@ Note that template jobs run on a node that must see the pools of the target entr
 ## Other various settings
 
 ```yaml
-timezone: CET
+timezone: Europe/Brussels
 ```
+
+`timezone` is an IANA timezone name (e.g. `Europe/Brussels`) and is used as the default timezone for new virtual machines. It controls the Windows guest clock; leave it unset to keep the default `localtime` behaviour.
 
 
         
