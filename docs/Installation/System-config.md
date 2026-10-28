@@ -350,10 +350,20 @@ The built-in whitesky.cloud storage (OpenvStorage) is a fixed storage class with
 
 ### Default storage class
 
-When a machine or disk is created without a `storage_class` parameter, boot (B) and data (D) disks default to:
+The optional top-level `default_storage_class` key sets the storage class used for new disks when no `storage_class` parameter is given:
+
+```yaml
+default_storage_class: ceph-standard
+```
+
+The configured default applies only to choosing the storage class for new disks and image templates; the storage class of existing references (image copies already placed on storage) is unaffected by setting or changing it.
+
+Allowed values are `whitesky-sds` (only when OpenvStorage is available on the grid) or the id of a `storage_class` that is referenced by at least one `external_storage` entry. The built-in `physical-storage` class cannot be configured as default. An unusable configured default (e.g. it references a storage class that was later removed) does not fail disk creation: it is logged as a warning and the legacy rule below is used. When the key is unset, boot (B) and data (D) disks default to:
 
 1. `ws_sds`, when OpenvStorage is available on the grid
 2. otherwise, the `storage_class` of the first `external_storage` entry that defines one
+
+The key is set by editing the system-config through the grid's update-config flow (the cloudbroker `grid.updateConfig` API, typically driven by the UI's config editor). The machine and disk creation paths in the portal may take a few minutes to pick up a change: the configmap must be synced by the kubelet to the mounted `system-config.yaml` and the services cache the system-config for 300 seconds.
 
 Disks of the other types (P, C, M) do not get a storage class.
 
